@@ -5,7 +5,7 @@ title: Projects
 
 [bampy](https://github.com/innovate-invent/bampy)
 ----
-Most python libraries that allow reading and writing HTS data (sam/bam) either link against HTSLib externally or are limited in finctionality. I needed a python native implementation of HTSLib to allow compatibility with the Numba project. This will allow for much faster performing python code and even GPU accelerated algorithms.
+Most python libraries that allow reading and writing HTS data (sam/bam) either link against HTSLib externally or are limited in functionality. I needed a python native implementation of HTSLib to allow compatibility with the Numba project. This will allow for much faster performing python code and even GPU accelerated algorithms.
 
 [configutator](https://github.com/innovate-invent/configutator)
 ----
