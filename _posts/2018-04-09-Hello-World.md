@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "Hello World"
 ---
 Loading Bachelors of Science...  
 Loading Certificate of Entrepreneurship and Innovation...  
