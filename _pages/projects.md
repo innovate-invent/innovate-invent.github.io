@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 bampy
 configutator
 blind winder
