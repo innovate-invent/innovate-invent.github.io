@@ -7,7 +7,7 @@ title                    : "Nolan Woods"
 title_separator          : "-"
 name                     : "Nolan Woods"
 description              : "Personal blog and home for my various projects."
-url                      : https://innovate-invent.com
+url                      : https://i2labs.ca
 baseurl                  : /
 repository               : innovate-invent/innovate-invent.github.io
 #teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
