@@ -3,12 +3,14 @@ permalink: /projects/esp8266/
 title: ESP8266
 sidebar:
   nav:
-    - title: Intro
-      url: ./
-    - title: Getting Started
-      url: ./getting-started
-    - title: Generic RESTful control
-      url: ./rest-server
+    - title ESP8266
+    children:
+      - title: Intro
+        url: ./
+      - title: Getting Started
+        url: ./getting-started
+      - title: Generic RESTful control
+        url: ./rest-server
 ---
 
 The ESP8266 is a great little WIFI module that can run micropython.
