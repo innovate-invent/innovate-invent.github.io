@@ -11,8 +11,8 @@ esp8266:
   - title: ESP8266
     children:
       - title: Intro
-        url: /projects/
+        url: /projects/esp8266/
       - title: Getting Started
-        url: /projects/getting-started
+        url: /projects/esp8266/getting-started
       - title: Generic RESTful control
-        url: /projects/rest-server
+        url: /projects/esp8266/rest-server
