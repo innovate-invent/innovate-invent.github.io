@@ -3,6 +3,7 @@ permalink: /projects/esp8266/
 title: ESP8266
 sidebar:
   nav: esp8266
+author_profile: false
 ---
 
 The ESP8266 is a great little WIFI module that can run micropython.
