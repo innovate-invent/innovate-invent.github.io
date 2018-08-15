@@ -1,3 +1,8 @@
+---
+permalink: /projects/
+title: ESP8266
+---
+
 ESP8266
 ========
 
