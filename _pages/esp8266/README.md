@@ -1,5 +1,5 @@
 ---
-permalink: /projects/
+permalink: /projects/esp8266/
 title: ESP8266
 ---
 
