@@ -8,7 +8,7 @@ main:
     url: /bio/
 
 esp8266:
-  - title ESP8266
+  - title: ESP8266
     children:
       - title: Intro
         url: ./
