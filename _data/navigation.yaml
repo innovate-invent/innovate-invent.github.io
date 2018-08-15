@@ -6,3 +6,13 @@ main:
     url: /projects/
   - title: "Bio"
     url: /bio/
+
+esp8266:
+  - title ESP8266
+    children:
+      - title: Intro
+        url: ./
+      - title: Getting Started
+        url: ./getting-started
+      - title: Generic RESTful control
+        url: ./rest-server
