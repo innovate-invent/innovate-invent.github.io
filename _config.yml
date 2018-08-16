@@ -222,6 +222,7 @@ defaults:
       share: true
       toc: true
       toc_sticky : true
+      sidebar: toc
 
 collections:
   projects:
