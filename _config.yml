@@ -225,3 +225,5 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+    toc: true
+    toc_sticky : true
