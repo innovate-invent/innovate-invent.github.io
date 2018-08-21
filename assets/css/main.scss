@@ -1,8 +1,8 @@
 ---
 ---
+@import "{{ site.theme }}";
+
 
 .page_content p {
   font: 14pt
 }
-
-@import "{{ site.theme }}";
