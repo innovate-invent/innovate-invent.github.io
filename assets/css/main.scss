@@ -6,3 +6,15 @@
 .page {
   font-size: 0.8em
 }
+
+@media (min-width: 80em)
+.page {
+    width: calc(100% - 200px);
+    padding-right: 200px;
+}
+
+@media (min-width: 64em)
+.page {
+    width: calc(100% - 100px);
+    padding-right: 100px;
+}
