@@ -1,5 +1,6 @@
 ---
-title: A simple, closed form, equation to recursivley subdivide a domain
+title: Recursive Subdivision
+excerpt: A simple, closed form, equation to recursivley subdivide a domain
 tags: colors subdivide recursive distinct math equation
 published: false
 ---
