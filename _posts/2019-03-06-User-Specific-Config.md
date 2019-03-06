@@ -1,5 +1,6 @@
 ---
-title: How to override a system config with user specific settings
+title: User Specific System Config
+excerpt: How to override a system config file with user specific settings
 published: false
 tags: /etc/hosts /etc/passwd unshare userland userspace mountspace
 ---
