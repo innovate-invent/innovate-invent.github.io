@@ -144,6 +144,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache # https://github.com/mmistakes/minimal-mistakes/issues/1875
 
 # mimic GitHub Pages with --safe
 whitelist:
