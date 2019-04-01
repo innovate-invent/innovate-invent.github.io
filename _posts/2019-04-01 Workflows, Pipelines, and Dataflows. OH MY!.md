@@ -1,3 +1,10 @@
+---
+title: Workflows, Pipelines, and Dataflows. OH MY!
+excerpt: A tuble down the cliff of academic software and standards
+published: false
+tags: workflow pipeline dataflow CWL galaxy job runner
+---
+
 Like all good speeches, I would like to begin by quoting a definition:
 
 __Pipeline__
