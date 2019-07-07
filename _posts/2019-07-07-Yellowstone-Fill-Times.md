@@ -12,7 +12,7 @@ Yellowstone National Park was the worlds first national park. It spans three sta
 
 If you are making last minute plans, there are still some cheap options. The park has first come-first serve campgrounds that you might be able to stay in. The campgrounds, lodges, and hotels are hosted either by the [National Parks Service (NPS)](https://www.nps.gov/yell/index.htm), or a private management company [Xanterra Travel Collection](https://www.yellowstonenationalparklodges.com/). Searching the internet for reliable information can be difficult as this private company is not forth coming about its distinction from the parks services. Calling in and asking for information can also yield very misleading information, it became clear when talking to them that they avoid answering questions that could direct you to the NPSs services. Even on the NPS website it does not make it clear that certain accommodations are privately managed and at best refer to them as ['concession operated'](https://www.nps.gov/yell/planyourvisit/parkfacts.htm#CP___PAGEID=2632122,/yell/planyourvisit/campgrounds.htm,10747|) in the facts page.
 
-Here is a map of the park with the campsites marked:
+Here is a map of the park with the campsites and some interesting locations marked:
 <iframe src="https://www.google.com/maps/d/embed?mid=1oaACxtvgZdVyeB90YZBtZ4_sg_WZmkUT" width="640" height="480"></iframe>
 
 Campgrounds managed by Xanterra are marked in green: Bridge Bay, Canyon, Fishing Bridge RV Park, Grant Village, and Madison.
