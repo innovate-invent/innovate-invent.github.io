@@ -12,7 +12,8 @@ If you are making last minute plans, there are still some cheap options. The par
 Here is a map of the park with the campsites and some interesting locations marked:
 <iframe src="https://www.google.com/maps/d/embed?mid=1oaACxtvgZdVyeB90YZBtZ4_sg_WZmkUT" width="640" height="480"></iframe>
 
-Campgrounds managed by Xanterra are marked in green
+Campgrounds managed by Xanterra are marked in green:
+
 |                        | Closed                     |
 | ---------------------- | -------------------------- |
 | Bridge Bay             | September 23 - May 16      |
@@ -21,7 +22,8 @@ Campgrounds managed by Xanterra are marked in green
 | Grant Village          | September 16 - June 6      |
 | Madison                | October 21 - April 25      |
 
-Campgrounds belonging to the NPS are marked brown
+Campgrounds belonging to the NPS are marked brown:
+
 |                        | Closed                     |
 | ---------------------- | -------------------------- |
 | Indian Creek           | September 10 - June 13     |
