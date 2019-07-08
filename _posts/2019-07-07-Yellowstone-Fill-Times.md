@@ -36,7 +36,7 @@ Campgrounds belonging to the NPS are marked brown:
 
 Two additional campgrounds were marked outside the park that might be worth looking at. [Lewis & Clark Caverns State Park](http://stateparks.mt.gov/lewis-and-clark-caverns/) has reservable cabins and campsites that do not fill until much later in the year. Eagle Creek Campground is another option but its close proximity to the park will likely have it fill quickly too.
 
-Xanterras campgrounds are reservable and usually book up a year in advance. It is still possible to get into these campsites the day of, if there is a last minute cancellation or someone leaves early. This is not the case for the NPS campgrounds, they are available to the first person to get there the morning you wish to stay and you can keep the campsite for 14 days (during the summer season). If you call the NPS information center they will not provide you with any information on how busy the campsites usually are and advise you to arrive early to wait in line (5-6am). You can not stay in the park outside of designated camp sites, and for someone travelling a great distance there a risk of being stranded outside the park in the middle of the night. The decision to take a gamble on the availability of the NPS campsites should not be taken lightly and thorough research should be done to ensure an enjoyable vacation. [TODO confirm the time campsites begin processing the lineup]
+Xanterras campgrounds are reservable and usually book up a year in advance. It is still possible to get into these campsites the day of, if there is a last minute cancellation or someone leaves early. This is not the case for the NPS campgrounds, they are available to the first person to get there the morning you wish to stay and you can keep the campsite for 14 days (during the summer season). If you call the NPS information center they will not provide you with any information on how busy the campsites usually are and advise you to arrive early to wait in line (5-6am). Campsite offices open at 7:30am each day and begin processing new visitors. You can not stay in the park outside of designated camp sites, and for someone travelling a great distance there a risk of being stranded outside the park in the middle of the night. The decision to take a gamble on the availability of the NPS campsites should not be taken lightly and thorough research should be done to ensure an enjoyable vacation.
 
 *Note: If you don't care about pretty graphs just skip to the end.*
 
@@ -61,6 +61,7 @@ Things to note about this data:
 - Duplicate reports on the same day were discarded, keeping the latest. There is a low occurance of this.
 - There are only 4 data points per campsite per day (one for each year).
 - Hotels and cabins were omited from the plot but were included in the legend. You can plot these by modifing the last line of code linked at the bottom of this page.
+- Fill times reported before 7:30am are due to the site continuing to be full from the previous day.
 
 Looking at figure 1 reveals a few trends:
 
@@ -78,7 +79,7 @@ Madison Campground
 
 Slough Creek
 
-TODO call about weird trend on Aug 27
+TODO call about weird trend on Aug 27 - no known cause
 
 <figure>
   <a href="/assets/posts/2019-07-07-Yellowstone-Fill-Times/Yellowstone-fill-times-week-aligned.html">
