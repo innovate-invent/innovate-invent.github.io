@@ -64,7 +64,7 @@ Things to note about this data:
 
 The data points around Sept 15 before 6am only occurred in 2015 and are possibly due to an issue with staff training when reporting fill times. 
 
-Campsite fill times and the datas relationship to park traffic is truncated by the capacity of the campgrounds at the upper portion of the graph. The bottom portion of the graphs distribution is clipped or limited by the time in the morning that park attendants begin processing new visitors. 
+Campsite fill times and the datas relationship to park traffic is truncated by the capacity of the campgrounds at the upper portion of the graph. The bottom portion of the graph is clipped or limited by the time in the morning that park attendants begin processing new visitors. 
 
 Mammoth campground is the only one open year round, all other campsites close for the Fall and Winter seasons. Traffic at Mammoth increases at the beginning of April and gets busier until after the other campsites open where its attendance drops likely as other campsites are preferred. Its attendance drops until mid June where the park begins to saturate during its busiest period, late July to mid August. This trend repeats as the park exits its busy period, Mammoths attendance drops until the beginning of September where it increases as the other campsites season comes to an end.
 
