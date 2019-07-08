@@ -49,3 +49,5 @@ TODO graph 2 discussion
 TODO conclusion
 
 The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb).
+
+I am in no way affiliated with the National Parks Service or Xanterra.
