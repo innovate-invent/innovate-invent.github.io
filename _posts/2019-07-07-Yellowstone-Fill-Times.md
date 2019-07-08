@@ -85,4 +85,4 @@ TODO conclusion
 
 The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb) as a IPython Notebook.
 
-I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis.
+I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis and do not attest to its accuracy or truthfulness.
