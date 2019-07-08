@@ -1,7 +1,7 @@
 ---
 title: Yellowstone National Park Fill Times
 excerpt: Avoid the rat race when visiting Yellowstone National Park
-published: true
+published: false
 tags: yellowstone national park fill times campground lodges plot data
 ---
 
@@ -70,6 +70,14 @@ Campsite fill times and the datas relationship to park traffic is truncated by t
 
 Mammoth campground is the only one open year round, all other campsites close for the Fall and Winter seasons. Traffic at Mammoth increases at the beginning of April and gets busier until after the other campsites open where its attendance drops, likely as other campsites are preferred. Its attendance drops until mid June where the park begins to saturate during its busiest period, late July to mid August. This trend repeats as the park exits its busy period, Mammoths attendance drops until the beginning of September where it increases as the other campsites season comes to an end.
 
+The top of figure 1 shows that the park completely and consistenly fills between July 15 and Aug 1. With only two datum exceptions, the park fills all the way to Aug 11 where competition for campsites begins to drop.
+
+Xanterras campgrounds largely fill before 8am throughout the season. Fishing Bridge RV park seems to be the most available relative to the other Xanterra campgrounds. Canyon and Grant village campgrounds are equally busy although Grant Village opens later in the season.
+
+Madison Campground
+
+Slough Creek
+
 TODO call about weird trend on Aug 27
 
 <figure>
@@ -85,4 +93,4 @@ TODO conclusion
 
 The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb) as a IPython Notebook.
 
-I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis and do not attest to its accuracy or truthfulness.
+I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis and do not attest to its accuracy or truthfulness. Data is presented under the Fair Use clause of the USA Copyright Act.
