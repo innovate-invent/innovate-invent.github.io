@@ -12,9 +12,24 @@ If you are making last minute plans, there are still some cheap options. The par
 Here is a map of the park with the campsites and some interesting locations marked:
 <iframe src="https://www.google.com/maps/d/embed?mid=1oaACxtvgZdVyeB90YZBtZ4_sg_WZmkUT" width="640" height="480"></iframe>
 
-Campgrounds managed by Xanterra are marked in green: Bridge Bay, Canyon, Fishing Bridge RV Park, Grant Village, and Madison.
+| Campgrounds managed by Xanterra are marked in green |
+|                        | Closed                     |
+| ---------------------- | -------------------------- |
+| Bridge Bay             | September 23 - May 16      |
+| Canyon                 | September 23 - May 23      |
+| Fishing Bridge RV Park | Closed until 2020          |
+| Grant Village          | September 16 - June 6      |
+| Madison                | October 21 - April 25      |
 
-Campgrounds belonging to the NPS are marked brown: Indian Creek, Lewis Lake, Mammoth, Norris, Pebble Creek, Slough Creek, and Tower Fall.
+| Campgrounds belonging to the NPS are marked brown   |
+| ---------------------- | -------------------------- |
+| Indian Creek           | September 10 - June 13     |
+| Lewis Lake             | November 4 - June 25       |
+| Mammoth                | Open year round            |
+| Norris                 | September 30 - May 16      |
+| Pebble Creek           | September 30 - June 14     |
+| Slough Creek           | October 16 - June 14       |
+| Tower Fall             | September 30 - May 23      |
 
 Two additional campgrounds were marked outside the park that might be worth looking at. [Lewis & Clark Caverns State Park](http://stateparks.mt.gov/lewis-and-clark-caverns/) has reservable cabins and campsites that do not fill until much later in the year. Eagle Creek Campground is another option but its close proximity to the park will likely have it fill quickly too.
 
@@ -34,9 +49,14 @@ Things to note about this data:
 - NPS began recording this information on July 11 2015 and was fetched June 11 2019.
 - This is entered manually by park staff and is subject to entry error. Individual data points should be taken with a grain of salt.
 - Dates with unreported fill times were assumed to not have filled and were assigned a fill time of 11:59pm that day.
+- Locations may not fill because they are not open.
 - Duplicate reports on the same day were discarded, keeping the latest. There is a low occurance of this.
 - There are only 4 data points per campsite per day (one for each year).
 - Hotels and cabins were omited from the plot but were included in the legend.
+
+At first look the parks traffic follows a parabolic trend rather than a inverted normal distribution. It is likely normally distributed but these are campsite fill times and the datas relationship to park traffic is truncated by the capacity of the campgrounds at the upper portion of the graph. The bottom portion of the graphs distribution is clipped or limited by the time in the morning that park attendants begin processing new visitors. 
+
+The data points around Sept 15 before 6am only occurred in 2015 and are possibly due to an issue with staff training when reporting fill times. 
 
 TODO call about weird trend on Aug 27
 
