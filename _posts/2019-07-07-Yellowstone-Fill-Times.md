@@ -60,20 +60,22 @@ Things to note about this data:
 - Locations may not fill because they are not open.
 - Duplicate reports on the same day were discarded, keeping the latest. There is a low occurance of this.
 - There are only 4 data points per campsite per day (one for each year).
-- Hotels and cabins were omited from the plot but were included in the legend.
+- Hotels and cabins were omited from the plot but were included in the legend. You can plot these by modifing the last line of code linked at the bottom of this page.
+
+Looking at figure 1 reveals a few trends:
 
 The data points around Sept 15 before 6am only occurred in 2015 and are possibly due to an issue with staff training when reporting fill times. 
 
 Campsite fill times and the datas relationship to park traffic is truncated by the capacity of the campgrounds at the upper portion of the graph. The bottom portion of the graph is clipped or limited by the time in the morning that park attendants begin processing new visitors. 
 
-Mammoth campground is the only one open year round, all other campsites close for the Fall and Winter seasons. Traffic at Mammoth increases at the beginning of April and gets busier until after the other campsites open where its attendance drops likely as other campsites are preferred. Its attendance drops until mid June where the park begins to saturate during its busiest period, late July to mid August. This trend repeats as the park exits its busy period, Mammoths attendance drops until the beginning of September where it increases as the other campsites season comes to an end.
+Mammoth campground is the only one open year round, all other campsites close for the Fall and Winter seasons. Traffic at Mammoth increases at the beginning of April and gets busier until after the other campsites open where its attendance drops, likely as other campsites are preferred. Its attendance drops until mid June where the park begins to saturate during its busiest period, late July to mid August. This trend repeats as the park exits its busy period, Mammoths attendance drops until the beginning of September where it increases as the other campsites season comes to an end.
 
 TODO call about weird trend on Aug 27
 
 <figure>
-<a href="/assets/posts/2019-07-07-Yellowstone-Fill-Times/Yellowstone-fill-times-week-aligned.html">
-<img src="/assets/posts/2019-07-07-Yellowstone-Fill-Times/yellowstone-fill-times-week-aligned.png" width="640" />
-</a>
+  <a href="/assets/posts/2019-07-07-Yellowstone-Fill-Times/Yellowstone-fill-times-week-aligned.html">
+  <img src="/assets/posts/2019-07-07-Yellowstone-Fill-Times/yellowstone-fill-times-week-aligned.png" width="640" />
+  </a>
   <figcaption>Figure 2 - Yellowstone Campsite Fill Times, Week Aligned</figcaption>
 </figure>
 
@@ -81,6 +83,6 @@ TODO graph 2 discussion
 
 TODO conclusion
 
-The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb).
+The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb) as a IPython Notebook.
 
-I am in no way affiliated with the National Parks Service or Xanterra.
+I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis.
