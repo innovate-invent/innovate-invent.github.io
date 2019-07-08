@@ -22,6 +22,11 @@ Xanterras campgrounds are reservable and usually book up a year in advance. It i
 
 Luckily the NPS provides the time a campsite fills each day on their [website](https://www.nps.gov/yell/planyourvisit/campgrounds.htm). Plotting this data can reveal trends that would aide the decision to visit the park.
 
+Data was fetched June 11 2019.
+Click on an image for an interactive graph of the data.
+You can hide parts of the interactive graph by clicking on the legend items.
+Hover over a datum for detailed information.
+
 <a href="/assets/posts/2019-07-07-Yellowstone-Fill-Times/Yellowstone-fill-times.html">
 <img src="/assets/posts/2019-07-07-Yellowstone-Fill-Times/yellowstone-fill-times.png" width="640" />
 </a>
