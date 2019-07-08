@@ -14,7 +14,7 @@ Here is a map of the park with the campsites and some interesting locations mark
 
 Campgrounds managed by Xanterra are marked in green:
 
-|                        | Closed                     |
+| Campsite              | Closed                     |
 | ---------------------- | -------------------------- |
 | Bridge Bay             | September 23 - May 16      |
 | Canyon                 | September 23 - May 23      |
@@ -24,7 +24,7 @@ Campgrounds managed by Xanterra are marked in green:
 
 Campgrounds belonging to the NPS are marked brown:
 
-|                        | Closed                     |
+| Campsite               | Closed                     |
 | ---------------------- | -------------------------- |
 | Indian Creek           | September 10 - June 13     |
 | Lewis Lake             | November 4 - June 25       |
