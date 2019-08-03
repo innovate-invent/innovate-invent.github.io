@@ -109,7 +109,7 @@ Pebble Creek and Slough Creek are consistently busy, if you are not specifically
 
 August 27 is possibly the best date to arrive on later in the season. The trend in the campsites at that time is too good to not take advantage of.
 
-Regardless of all of this, you should try to plan your accomodation around the activities to intend to do in the park. Once you choose a location, have a look at the graphs above and filter out all but that location and look at the trends around your intended dates. Clicking on the image of the graph will take you to an interactive version where you can click on the legend items to hide them, zoom in on the date range you want, and pan around to consider alternative dates.
+Regardless of all of this, you should try to plan your accomodation around the activities you intend to do in the park. Once you choose a location, have a look at the graphs above and filter out all but that location and look at the trends around your intended dates. Clicking on the image of the graph will take you to an interactive version where you can click on the legend items to hide them, zoom in on the date range you want, and pan around to consider alternative dates.
 
 Good luck on your adventure and remember that plans failing are what makes it an adventure. Just make sure you are sufficiently prepared.
 
