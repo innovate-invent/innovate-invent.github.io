@@ -34,15 +34,15 @@ Campgrounds belonging to the NPS are marked brown:
 | Slough Creek           | October 16 - June 14       |
 | Tower Fall             | September 30 - May 23      |
 
-Two additional campgrounds were marked outside the park that might be worth looking at. [Lewis & Clark Caverns State Park](http://stateparks.mt.gov/lewis-and-clark-caverns/) has reservable cabins and campsites that do not fill until much later in the year. Eagle Creek Campground is another option but its close proximity to the park will likely have it fill quickly too.
+Two additional campgrounds were marked outside the park that might be worth looking at. [Lewis & Clark Caverns State Park](http://stateparks.mt.gov/lewis-and-clark-caverns/) has reservable cabins and campsites that do not fill until much later in the year. Eagle Creek Campground is another option but its proximity to the park will likely have it fill quickly too.
 
-Xanterras campgrounds are reservable and usually book up a year in advance. If there is a last minute cancellation or someone leaves early it is still possible to get into these campsites the day of. This is not the case for the NPS campgrounds, they are available to the first person to get there the morning you wish to stay and you can keep the campsite for 14 days (during the summer season). If you call the NPS information center they will not provide you with any information on how busy the campsites usually are and advise you to arrive early to wait in line (5-6am). Campsite offices open at 7:30am each day and begin processing new visitors. You can not stay in the park outside of designated camp sites, and for someone travelling a great distance there is a risk of being stranded outside the park in the middle of the night. The decision to take a gamble on the availability of the NPS campsites should not be taken lightly and thorough research should be done to ensure an enjoyable vacation.
+Xanterras campgrounds are reservable and usually book up a year in advance. If there is a last minute cancellation or someone leaves early it is still possible to get into these campsites the day of. This is not the case for the NPS campgrounds, they are available to the first person to get there the morning you wish to stay and you can keep the campsite for 14 days (during summer). If you call the NPS information center they will not provide you with any information on how busy the campsites usually are and advise you to arrive early to wait in line (5-6am). Campsite offices open at 7:30am each day and begin processing new visitors. You can not stay in the park outside of designated camp sites, and for someone traveling a great distance there is a risk of being stranded outside the park in the middle of the night. The decision to take a gamble on the availability of the NPS campsites should not be taken lightly and thorough research should be done to ensure an enjoyable vacation.
 
 *Note: If you don't care about pretty graphs just skip to the end.*
 
 NPS provides the time a campsite fills each day on their [website](https://www.nps.gov/yell/planyourvisit/campgrounds.htm). Plotting this data can reveal trends that would aide the decision to visit the park. 
 
-For the remainder of this analysis it will be assumed that earlier fill times are caused by higher demand and higher park traffic. This is not necessarily true as visitor behavoir is complex and there can be additional factors that might motivate people to arrive at the park at different times, on different dates. The goal is to observe qualititative trends rather than produce quantitative conclusions.
+For the remainder of this analysis it will be assumed that earlier fill times are caused by higher demand and higher park traffic. This is not necessarily true as visitor behavior is complex and there can be additional factors that might motivate people to arrive at the park at different times, on different dates. The goal is to observe qualitative trends rather than produce quantitative conclusions.
 
 Click on an image for an interactive graph of the data.
 You can hide parts of the interactive graph by clicking on the legend items.
@@ -60,9 +60,9 @@ Things to note about this data:
 - This is entered manually by park staff and is subject to entry error. Individual data points should be taken with a grain of salt.
 - Dates with unreported fill times were assumed to not have filled and were assigned a fill time of 11:59pm that day.
 - Locations may not fill because they are not open.
-- Duplicate reports on the same day were discarded, keeping the latest. There is a low occurance of this.
+- Duplicate reports on the same day were discarded, keeping the latest. There is a low occurrence of this.
 - There are only 4 data points per campsite per day (one for each year).
-- Hotels and cabins were omited from the plot but were included in the legend. You can plot these by modifing the last line of code linked at the bottom of this page.
+- Hotels and cabins were omitted from the plot but were included in the legend. You can plot these by modifying the last line of code linked at the bottom of this page.
 - Fill times reported before 7:30am are due to the site continuing to be full from the previous day.
 
 Looking at figure 1 reveals a few trends:
@@ -73,7 +73,7 @@ Campsite fill times and the datas relationship to park traffic is truncated by t
 
 Mammoth campground is the only one open year round, all other campsites close for the Fall and Winter seasons. Traffic at Mammoth increases at the beginning of April and gets busier until after the other campsites open where its attendance drops, likely as other campsites are preferred. Attendance drops until mid June where the park begins to saturate during its busiest period, late July to mid August. This trend repeats as the park exits its busy period. Mammoths attendance drops until the beginning of September where it increases as the other campsites season comes to an end.
 
-The top of figure 1 shows that the park completely and consistenly fills between July 15 and Aug 1. With only two datum exceptions, the park fills all the way to Aug 11 where competition for campsites begins to drop.
+The top of figure 1 shows that the park completely and consistently fills between July 15 and Aug 1. With only two datum exceptions, the park fills all the way to Aug 11 where competition for campsites begins to drop.
 
 Xanterras campgrounds largely fill before 8am throughout the season. Fishing Bridge RV park seems to be the most available relative to the other Xanterra campgrounds. Canyon and Grant village campgrounds are equally busy although Grant Village opens later in the season.
 
@@ -81,7 +81,7 @@ Xanterras campgrounds appear to suddenly and consistently start filling an hour 
 
 NPS doesn't follow this trend as closely but looking at Lewis Lake, Tower Fall, and Norris campgrounds, there is a distinct jump in fill time around that date. Including Mammoth, demand for these campsites slowly begins to increase until the end of the season. August 27 may represent a sudden demographic shift in vistors, with a different vacationing culture or schedule. 
 
-Slough Creek and Pebble Creek do not follow any of the aformentioned trends and stay consistently busy while they are open. This may also represent a different demographic that come for the activities available at these specific campgrounds.
+Slough Creek and Pebble Creek do not follow any of the aforementioned trends and stay consistently busy while they are open. This may also represent a different demographic that come for the activities available at these specific campgrounds.
 
 Given the predominant Monday to Friday work culture of the United States, the following graph attempts to align the weekdays of each year to observe any possible weekender demographic trends.
 
@@ -94,9 +94,9 @@ Given the predominant Monday to Friday work culture of the United States, the fo
 
 Things to note about this data:
 - 2018 is the only year to align to the horizontal axis as January 1 2018 was a Monday.
-- It is possible that there is justification to align a year a week later than currently displayed. That relationship would be complex and the mathematicially simplest method was chosen.
+- It is possible that there is justification to align a year a week later than currently displayed. That relationship would be complex and the mathematically simplest method was chosen.
 
-Suprisingly the weekend trend is opposite of what was initially expected. This trend mostly appears during the July 15 to August 15 busy period as it is obscured by the fact that the campgrounds don't consistently fill otherwise. It appears that campsites fill later in the day on weekends. This is likely due to high turnover as the people who stayed for more than the weekend return home. This would also explain the fill times Monday to Friday, people in the park on those dates are staying for the entire week. With low turnover, the campsites remain full and earlier fill times are reported.
+Surprisingly the weekend trend is opposite of what was initially expected. This trend mostly appears during the July 15 to August 15 busy period as it is obscured by the fact that the campgrounds don't consistently fill otherwise. It appears that campsites fill later in the day on weekends. This is likely due to high turnover as the people who stayed for more than the weekend return home. This would also explain the fill times Monday to Friday, people in the park on those dates are staying for the entire week. With low turnover, the campsites remain full and earlier fill times are reported.
 
 What to make of all of this
 ---------------------------
@@ -109,10 +109,10 @@ Pebble Creek and Slough Creek are consistently busy, if you are not specifically
 
 August 27 is possibly the best date to arrive on later in the season. The trend in the campsites at that time is too good to not take advantage of.
 
-Regardless of all of this, you should try to plan your accomodation around the activities you intend to do in the park. Once you choose a location, have a look at the graphs above and filter out all but that location and look at the trends around your intended dates. Clicking on the image of the graph will take you to an interactive version where you can click on the legend items to hide them, zoom in on the date range you want, and pan around to consider alternative dates.
+Regardless of all of this, you should try to plan your accommodation around the activities you intend to do in the park. Once you choose a location, have a look at the graphs above and filter out all but that location and look at the trends around your intended dates. Clicking on the image of the graph will take you to an interactive version where you can click on the legend items to hide them, zoom in on the date range you want, and pan around to consider alternative dates.
 
 Good luck on your adventure and remember that plans failing are what makes it an adventure. Just make sure you are sufficiently prepared.
 
 The source code used to generate the graphs is available [here](/assets/posts/2019-07-07-Yellowstone-Fill-Times/report.ipynb) as a IPython Notebook.
 
-I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making descisions. I take no responsibility for any outcome resulting from this data or analysis and do not attest to its accuracy or truthfulness. Data is presented under the Fair Use clause of the USA Copyright Act.
+I am in no way affiliated with the National Parks Service or Xanterra. This data is presented as is and you should draw your own conclusions when making decisions. I take no responsibility for any outcome resulting from this data or analysis and do not attest to its accuracy or truthfulness. Data is presented under the Fair Use clause of the USA Copyright Act.
