@@ -1,5 +1,5 @@
 ---
-permalink: /bio/
+#permalink: /bio/
 title: Biography
 published: false
 ---
