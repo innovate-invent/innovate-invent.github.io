@@ -1,6 +1,6 @@
 ---
 title: Workflows, Pipelines, and Dataflows. OH MY!
-excerpt: A tuble down the cliff of academic software and standards
+excerpt: A tumble down the cliff of academic software and standards
 published: false
 tags: workflow pipeline dataflow CWL galaxy job runner
 ---
@@ -22,7 +22,7 @@ __Mixing of terms__
 
 -- [stevegt 2016](https://www.biostars.org/p/17696/#203354)
 
-Steve succinctly summarised something that had been bothering me when talking about workflows and [CWL](https://github.com/common-workflow-language/common-workflow-language). "Workflow" is largley a misnomer in these contexts, a workflow manager is more abstract and generally found in the buisness world as a BPM such as [YAWL](http://www.yawlfoundation.org/).
+Steve succinctly summarised something that had been bothering me when talking about workflows and [CWL](https://github.com/common-workflow-language/common-workflow-language). "Workflow" is largely a misnomer in these contexts, a workflow manager is more abstract and generally found in the buisness world as a BPM such as [YAWL](http://www.yawlfoundation.org/).
 
 A year ago I did a survey of "Workflow" managers, concluding [Galaxy](https://galaxyproject.org/) a clear winner. It managed data, data formats, [data provenance](https://en.wikipedia.org/wiki/Data_lineage#Data_Provenance), tool dependencies, job runners, access control for shared environments, and bundled it all up into a GUI.
 
