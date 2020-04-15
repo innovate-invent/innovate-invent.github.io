@@ -14,7 +14,7 @@ MathJax = {
 </script>
 
 For an infinite discreet series n we want to map to a range [0, 1] such that the values within that 
-range are as distant (distinct) as possible without recalculating the predecessors (d(n)).
+range are as distant (distinct) as possible without recalculating the predecessors (`d(n)`).
 
 This can be done in O(1) time via recursive subdivision of the range.
 ```
@@ -23,7 +23,7 @@ d(n) = 0, 1, 0.5, 0.25, 0.75, 0.125, 0.375 ...
      = 0/1, 1/1, 1/2, 1/4, 3/4, 1/8, 3/8, 5/8, 7/8, 1/16, 3/16, ...
 ```
 You can see the numerator and denominator are increasing with a logarithmic pattern.
-Because we are recursively subdividing by 2 it is ceil(log_2(n)).
+Because we are recursively subdividing by 2 it is `ceil(log_2(n))`.
 ```
 d(n) = g(n)/2^f(n)
 g(0) = 0
@@ -34,7 +34,7 @@ f(0) = 0
 2^f(n)= 1, 1, 2, 4, 4, 8, 8, 8, 8, 16, 16, 16, 16, 16, 16, 16, 16, 32
 ```
 
-The numerator is a little more complicated as it is the integer remainder of log_2(n) or n - 2^floor(log_2(n))
+The numerator is a little more complicated as it is the integer remainder of `log_2(n)` or `n - 2^floor(log_2(n))`
 ```
 n - 2^(floor(log_2(n))) = 0, 0, 0, 1, 0, 1, 0, 1, 2, 0, 1, 2, 3, ...
 ```
