@@ -20,6 +20,6 @@ git credential approve
 ```
 
 The first command simply ensures that you have the cache credential helper active. If you are using any other credential helper then this post may not be relevant to you.
-The second generates a config in the format expected by the `git credentail approve` command. `$PASSWORD` can be substitued with your account password or a GitHub PAT (Personal Access Token).
+The second generates a config in the format expected by the `git credentail approve` command. `$PASSWORD` can be substituted with your account password or a GitHub PAT (Personal Access Token).
 
 I personally use this in my GitHub Actions Terraform pipelines. Have a look at the [git credential documentation](https://git-scm.com/docs/git-credential) for more information.
