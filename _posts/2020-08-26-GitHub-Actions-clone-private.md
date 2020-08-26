@@ -8,7 +8,7 @@ You may encounter a program that is indirectly trying to use git to access a pri
 Git provides a way to preconfigure credentials that your program can then pick up. Note that you should not use this if you are simply trying to directly clone a repository in a GitHub Action. 
 GitHub provides the [checkout](https://github.com/actions/checkout#usage) action to do that and provides a configuration option to hand it an authentication token.
 
-This is particularitly useful if you are using an application called Terraform. It provides a means to download modules via GitHub prepositories.
+This is particularitly useful if you are using an application called [Terraform](https://www.terraform.io/). It provides a means to download modules via GitHub prepositories.
 Terraform does not provide a means to authenticate against private repositories.
 
 To get around this, you can preconfigure credentials before running your application via the following commands:
