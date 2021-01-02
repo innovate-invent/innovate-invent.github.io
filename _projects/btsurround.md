@@ -77,7 +77,7 @@ sudo bdaddr -i hci3 00:1A:7D:DA:71:13
 sudo bdaddr -i hci4 00:1A:7D:DA:71:14
 ```
 
-Once the Bluetooth radios are detected and configured, you will be able to pair each speaker with a different dongle. I used the `blueman-manager` GUI frovided by the [blueman](https://archlinux.org/packages/community/x86_64/blueman/) package to simplify the task.
+Once the Bluetooth radios are detected and configured, you will be able to pair each speaker with a different dongle. I used the `blueman-manager` GUI provided by the [blueman](https://archlinux.org/packages/community/x86_64/blueman/) package to simplify the task.
 
 With the Bluetooh speakers paired and active, PulseAudio should list them as bluez sinks:
 ```sh
