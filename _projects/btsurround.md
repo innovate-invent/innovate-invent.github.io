@@ -12,7 +12,7 @@ Bluetooth supports transmitting high quality audio to a wireless device. A relat
 - 4 port USB Hub (I had an old SIIG USB3 lying around)
 - Laptop with Manjaro Linux
 
-An important feature of the Anker Soundcore bluetooth speakers is the ability to play audio while charging. This allows providing power if you want to use them longer than their internal batteries support.
+An important feature of the Anker Soundcore Bluetooth speakers is the ability to play audio while charging. This allows providing power if you want to use them longer than their internal batteries support.
 
 ## Ensure the Bluetooth dongles are detected
 Plug your Bluetooth dongles into the USB hub and plug the hub into the laptop. Open an terminal and run:
