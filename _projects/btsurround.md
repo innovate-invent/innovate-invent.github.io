@@ -119,4 +119,4 @@ TODO write script to use laptop microphone to autocalibrate
 TODO `pactl set-port-latency-offset`
 
 ## Conclusion
-This appears to work as intended. This is not a replacement for an engineered home theater system, but it accomplishes the goal given the constraints. I intend to look into adding a subwoofer channel and possibly use the laptop speakers as a center channel.
+This appears to work as intended. This is not a replacement for an engineered home theater system, but it accomplishes the goal given the constraints. I intend to look into adding a subwoofer channel and possibly use the laptop speakers as a center channel. Additional speakers can be added if a more complex deployment is desired. The next step is to source software that allows dynamically creating a 3D audio environment without having to pull in an entire game engine.
