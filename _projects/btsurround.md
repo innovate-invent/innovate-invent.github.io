@@ -115,4 +115,8 @@ The first four lines downmix each speaker to a mono sink. Be sure to replace `bl
 Download [a test audio file](https://ia800406.us.archive.org/7/items/5.1SurroundSoundTestFilesVariousFormatsAACAC3MP4DTSWAV/5.1%20Surround%20Sound%20AAC%20Test.mp4) and play it in your browser or a media player such as VLC. Set the audio output to the newly created "Bluetooth surround" device. Verify that each channel is working. 
 
 ## Refine calibration of positional audio
+TODO write script to use laptop microphone to autocalibrate
 TODO `pactl set-port-latency-offset`
+
+## Conclusion
+This appears to work as intended. This is not a replacement for an engineered home theater system, but it accomplishes the goal given the constraints. I intend to look into adding a subwoofer channel and possibly use the laptop speakers as a center channel.
