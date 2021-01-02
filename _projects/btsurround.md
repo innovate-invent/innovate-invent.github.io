@@ -68,7 +68,7 @@ hci0:	Configuration options
 
 ```
 
-Note: hci0 is the Bluetooth radio built into the laptop. I chose not to use this to ensure uniformity between the channels.
+Note: `hci0` is the Bluetooth radio built into the laptop. I chose not to use this to ensure uniformity between the channels.
 
 ### Change the MAC address'
 You may encounter an issue where multiple of the Bluetooth radios are configured with the same MAC address. This will cause a conflict and you will not be able to configure or pair any of the radios. You will need to run `sudo bdaddr -i hci<n> <new mac address>`.
