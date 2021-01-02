@@ -68,6 +68,7 @@ hci0:	Configuration options
 
 ```
 
+You should see your dongles listed with assigned `hci<n>` identifiers. See [ArchWiki Bluetooth troubleshooting](https://wiki.archlinux.org/index.php/Bluetooth#Bluetooth_USB_Dongle) if the dongles are not listed as expected.
 Note: `hci0` is the Bluetooth radio built into the laptop. I chose not to use this to ensure uniformity between the channels.
 
 ### Change the MAC address'
