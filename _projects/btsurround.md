@@ -4,7 +4,7 @@ author_profile: false
 published: true
 ---
 
-** This is a work in progress, please check back later for more **
+**This is a work in progress, please check back later for more**
 
 Bluetooth supports transmitting high quality audio to a wireless device. A relatively cheap and portable surround sound solution can be produced to quickly deploy positional audio in a space. Limitations on the Bluetooth stack prevent connecting multiple audio devices to a single tranciever. This project is to explore the viability of stitching multiple Bluetooth USB tranceivers together into a single multichannel virtual audio sink using features provided with PulseAudio.
 
