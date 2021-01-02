@@ -106,4 +106,4 @@ pactl load-module module-remap-sink sink_name=rr sink_properties=device.descript
 pactl load-module module-combine-sink sink_name=surround sink_properties=device.description="Bluetooth surround" slaves=fl,fr,rl,rr channels=4 channel_map=front-left,front-right,rear-left,rear-right
 ```
 
-The first line includes the default PulseAudio configuration. The next four lines of the config downmix each speaker to a mono sink. The last line then combines them as a single 4 channel sink. Write this configuration to a file and `chmod +x` the file. Because the Bluetooth devices don't exist during PulseAudio initialization, this script needs to be ran after all pairing is completed rather than in `/etc/pulse/default.pa`. 
+The first four lines downmix each speaker to a mono sink. The last line then combines them as a single 4 channel sink. Write this configuration to a file and `chmod +x` the file. Because the Bluetooth devices don't exist during PulseAudio initialization, this script needs to be ran after all pairing is completed rather than in `/etc/pulse/default.pa`. 
