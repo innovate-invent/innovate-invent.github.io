@@ -93,11 +93,12 @@ Ensure you have the speakers configured with the A2DP Bluetooth profile.
 
 Now we need to configure the four speaker sinks as a single combined sink. The PulseAudio configuration looks something like:
 ```
-load-module module-remap-sink sink_name=front-left master=bluez_sink.08_EB_ED_21_BA_41.a2dp_sink channels=2 channel_map=mono,mono
-load-module module-remap-sink sink_name=front-right master=bluez_sink.08_EB_ED_94_9F_51.a2dp_sink channels=2 channel_map=mono,mono
-load-module module-remap-sink sink_name=rear-left master=bluez_sink.08_EB_ED_05_A4_7E.a2dp_sink channels=2 channel_map=mono,mono
-load-module module-remap-sink sink_name=rear-right master=bluez_sink.08_EB_ED_B7_D0_3B.a2dp_sink channels=2 channel_map=mono,mono
-load-module module-combine-sink sink_name=surround slaves=front-left,front-right,rear-left,rear-right channels=4 channel_map=front-left,front-right,rear-left,rear-right
+.include /etc/pulse/default.pa
+load-module module-remap-sink sink_name=fl sink_properties=device.description="Front left Bluetooth speaker" master=bluez_sink.08_EB_ED_21_BA_41.a2dp_sink channels=2 channel_map=front-left,front-left master_channel_map=front-left,front-right
+load-module module-remap-sink sink_name=fr sink_properties=device.description="Front right Bluetooth speaker" master=bluez_sink.08_EB_ED_94_9F_51.a2dp_sink channels=2 channel_map=front-right,front-right master_channel_map=front-left,front-right
+load-module module-remap-sink sink_name=rl sink_properties=device.description="Rear left Bluetooth speaker" master=bluez_sink.08_EB_ED_05_A4_7E.a2dp_sink channels=2 channel_map=rear-left,rear-left master_channel_map=front-left,front-right
+load-module module-remap-sink sink_name=rr sink_properties=device.description="Rear right Bluetooth speaker" master=bluez_sink.08_EB_ED_B7_D0_3B.a2dp_sink channels=2 channel_map=rear-right,rear-right master_channel_map=front-left,front-right
+load-module module-combine-sink sink_name=surround sink_properties=device.description="Bluetooth surround" slaves=fl,fr,rl,rr channels=4 channel_map=front-left,front-right,rear-left,rear-right
 ```
 
-The first four lines of the config downmix each speaker to a mono sink. The last line then combines them as a single 4 channel sink.
+The first line includes the default PulseAudio configuration. The next four lines of the config downmix each speaker to a mono sink. The last line then combines them as a single 4 channel sink. Write this configuration to `~/.config/pulse/btsurround.pa` and run `pulseaudio -k` to restart the service.
