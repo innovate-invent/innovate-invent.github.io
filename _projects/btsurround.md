@@ -6,7 +6,7 @@ published: true
 
 Bluetooth supports transmitting high quality audio to a wireless device. A relatively cheap and portable surround sound solution can be produced to quickly deploy positional audio in a space. Limitations on the Bluetooth stack prevent connecting multiple audio devices to a single tranciever. This project is to explore the viability of stitching multiple Bluetooth USB tranceivers together into a single multichannel virtual audio sink using features provided with PulseAudio.
 
-## Hardware used for testing:
+## Hardware used for testing
 - 4x SODIAL USB Bluetooth dongles (CSR 4.0 chipset) [$9.99 on Amazon.ca](https://www.amazon.ca/gp/product/B00E38N7QE/)
 - 4x Anker Soundcore Portable Bluetooth Speaker (AK-848061070804-cr) [$34.99 on Amazon.ca](https://www.amazon.ca/gp/product/B07QQQG7FV/)
 - 4 port USB Hub (I had an old SIIG USB3 lying around)
