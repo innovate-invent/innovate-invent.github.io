@@ -110,3 +110,9 @@ pactl load-module module-combine-sink sink_name=surround sink_properties=device.
 ```
 
 The first four lines downmix each speaker to a mono sink. Be sure to replace `bluez_sink.*.a2dp_sink` with the names listed by `pactl list short sinks`. The last line then combines them as a single 4 channel sink. Write this configuration to a file and `chmod +x` the file. Because the Bluetooth devices don't exist during PulseAudio initialization, this script needs to be ran after all pairing is completed rather than in `/etc/pulse/default.pa`. 
+
+## Test channels
+Download [a test audio file](https://ia800406.us.archive.org/7/items/5.1SurroundSoundTestFilesVariousFormatsAACAC3MP4DTSWAV/5.1%20Surround%20Sound%20AAC%20Test.mp4) and play it in your browser or a media player such as VLC. Set the audio output to the newly created "Bluetooth surround" device. Verify that each channel is working. 
+
+## Refine calibration of positional audio
+TODO `pactl set-port-latency-offset`
