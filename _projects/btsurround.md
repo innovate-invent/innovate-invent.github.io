@@ -6,7 +6,7 @@ published: true
 
 Bluetooth supports transmitting high quality audio to a wireless device. A relatively cheap and portable surround sound solution can be produced to quickly deploy positional audio in a space. Limitations on the Bluetooth stack prevent connecting multiple audio devices to a single tranciever. This project is to explore the viability of stitching multiple Bluetooth USB tranceivers together into a single multichannel virtual audio sink using features provided with PulseAudio.
 
-Hardware used for testing:
+## Hardware used for testing:
 - 4x SODIAL USB Bluetooth dongles (CSR 4.0 chipset) [$9.99 on Amazon.ca](https://www.amazon.ca/gp/product/B00E38N7QE/)
 - 4x Anker Soundcore Portable Bluetooth Speaker (AK-848061070804-cr) [$34.99 on Amazon.ca](https://www.amazon.ca/gp/product/B07QQQG7FV/)
 - 4 port USB Hub (I had an old SIIG USB3 lying around)
@@ -14,6 +14,7 @@ Hardware used for testing:
 
 An important feature of the Anker Soundcore bluetooth speakers is the ability to play audio while charging. This allows providing power if you want to use them longer than their internal batteries support.
 
+## Ensure the Bluetooth dongles are detected
 Plug your Bluetooth dongles into the USB hub and plug the hub into the laptop. Open an terminal and run:
 ```sh
 $ lsusb
@@ -26,6 +27,7 @@ Bus 001 Device 042: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (
 You should see the Bluetooth radios listed. If not, try plugging the Bluetooth dongles in one at a time and check that they are being listed.
 Possibly try a different USB hub or port on the laptop. If the radios are still not listed see some of the [solutions mentioned here](https://superuser.com/questions/1310775/bluetooth-adapter-not-detected-on-linux).
 
+## Verify the driver configuration
 The next step is to ensure that the Bluetooth driver is detecting the radios. Assuming you are using the [Bluez driver](https://archlinux.org/packages/extra/x86_64/bluez/) run:
 ```sh
 $ btmgmt info
@@ -68,6 +70,7 @@ hci0:	Configuration options
 
 Note: hci0 is the Bluetooth radio built into the laptop. I chose not to use this to ensure uniformity between the channels.
 
+### Change the MAC address'
 You may encounter an issue where multiple of the Bluetooth radios are configured with the same MAC address. This will cause a conflict and you will not be able to configure or pair any of the radios. You will need to run `sudo bdaddr -i hci<n> <new mac address>`.
 I had to run the following:
 ```sh
@@ -77,6 +80,7 @@ sudo bdaddr -i hci3 00:1A:7D:DA:71:13
 sudo bdaddr -i hci4 00:1A:7D:DA:71:14
 ```
 
+## Pair speakers
 Once the Bluetooth radios are detected and configured, you will be able to pair each speaker with a different dongle. I used the `blueman-manager` GUI provided by the [blueman](https://archlinux.org/packages/community/x86_64/blueman/) package to simplify the task.
 
 With the Bluetooh speakers paired and active, PulseAudio should list them as Bluez sinks:
@@ -91,6 +95,7 @@ $ pactl list short sinks
 
 Ensure you have the speakers configured with the A2DP Bluetooth profile.
 
+## Configure PulseAudio
 Now we need to configure the four speaker sinks as a single combined sink. The PulseAudio configuration looks something like:
 ```sh
 #!/usr/bin/env sh
