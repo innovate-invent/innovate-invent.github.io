@@ -3,7 +3,7 @@ title: Recursive Subdivision
 excerpt: A simple, closed form, equation to recursively subdivide a domain
 tags: colors subdivide recursive distinct math equation
 header:
-    image: assets/posts/2019-02-28-Recursive-Subdivision/GoldenSpiralLogarithmic_color_in.gif
+    og_image: assets/posts/2019-02-28-Recursive-Subdivision/GoldenSpiralLogarithmic_color_in.gif
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script>
