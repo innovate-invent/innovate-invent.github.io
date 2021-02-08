@@ -11,8 +11,8 @@ institutions. I wanted a system that uses established standards, doesn't try to 
 one infrastructure. I also needed a project that would introduce me to some challenges of capturing processes and help
 identify and define the problem of the [Knowledge Capture](../knowledge/) project. Data analysis and computer processes
 in general are very well-structured, defined, and already codified in a way that computers understand. Unlike
-the [Meal-prep automation](autokitchen/) project, this a good start to focus on the more abstract challenges of defining
-processes.
+the [Meal-prep automation](autokitchen/) project, this a good start to focus on the more abstract challenges of
+describing processes.
 
 **Note: This is a live document and will be expanded upon as this project progresses**
 
@@ -24,7 +24,8 @@ data science is that it is very new and much like the wild west. Sometimes I won
 dealing with some issues I have to address on a daily basis. To get you up to speed, understand that there are three
 main aspects to working with data:
 
-**The data**(duh) is problematic because there are a million different formats, with varying levels of structure, and
+### The data
+(duh) is problematic because there are a million different formats, with varying levels of structure, and
 loosely follow some poorly if not ad hoc defined schemas. This means that if you want to run a program on a piece of
 data, you have to interconvert it between different variants of the same format. This often turns into manually editing
 the file. Many of the formats are text based and encode data as text, this gives rise to many free-form variants,
@@ -44,16 +45,23 @@ being written to millions of times per second. It is usually a process of trial 
 accesses the data. Meaning you have to start processing the data, wait for the system to explode, move the data to a
 more appropriate location, rinse, repeat.
 
-**The tools** are the largest part of the problem. They are often written by students with little to none of the
+### The tools 
+are the largest part of the problem. They are often written by students with little to none of the
 practices you might expect of a professional programmer. Documentation is usually sparse if it exists, and the code is
-usually written by someone who wanted to get creative with code structure. Many of the tools are also decades old, still
-in use because the algorithm they implement is conceptually very useful despite the execution. Software that has been
-optimised generally optimises for the wrong things and put huge demands on a single compute node. The chosen language
-that the software was written in is often completely inappropriate for its purpose, and there is an unmanageable variety
-of dependencies each language ecosystem pulls in. Some software has undeclared dependencies that require low level
-hacking to determine why it works on some systems and not others.
+usually written by someone who wanted to get creative with code structure. Many of the tools are also decades old, and
+still in use because the algorithm they implement is conceptually very useful despite the implementation. Software that
+has been optimised generally optimises for the wrong things and put huge demands on a single compute node. The chosen
+language that the software was written in is often completely inappropriate for its purpose, and there is an
+unmanageable variety of dependencies each language ecosystem pulls in. Some software even has undeclared dependencies
+that require low level hacking to determine why it works on some systems and not others.
 
-**The infrastructure** is less inherently a problem and more just dealing with the variety of environments and
+### The infrastructure 
+is less inherently a problem and more just dealing with the variety of environments and
 restrictions that each one places.
 
-**The pipeline**, yes I can count, ..... TODO
+### The pipeline
+, yes I can count, ..... TODO
+
+<style>
+.page_content h3 { display: inline-block; }
+</style>

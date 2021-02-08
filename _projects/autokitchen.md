@@ -1,7 +1,7 @@
 ---
 title: Meal-prep Automation  
 author_profile: true  
-tags: automation food preparation processing cooking nlp ai meal nutrition
+tags: automation food preparation processing cooking NLP AI meal nutrition
 ---
 My own struggles with eating well and cooking respectable meals combined with my need to break my teeth on process
 capture has resulted in this project. Cooking recipes are a relatively low bar in terms of capture and codification as
@@ -82,7 +82,7 @@ be too close to trying to replace the human.
 
 Machines are much better than humans at doing meticulous work quickly. This can be leveraged to produce a homogenous
 mixture by placing each finite granule exactly where it needs to be. Imagine something like a 3D printer, placing each
-ingredient layer by layer in the exact pattern desired for the mixture. This approach would allow infinite variability
+ingredient, layer by layer, in the exact pattern desired for the mixture. This approach would allow infinite variability
 of the mixtures and more readily serve the wide variety of needs of each recipe. The only limitation would be the
 machines' ability to manipulate each ingredients' granule in the mixture at the scale required.
 
@@ -97,8 +97,8 @@ Given the ambitious scale of this project, it demands some level of automation t
 all recipes are stored in loosely structured natural language (English, French, etc.). Many of which are not even
 encoded as text in a computer readable format (Books and images). Technologies need to be leveraged to automate much of
 the task of codifying and restructuring the information in a format that allows computers to manipulate the data en
-masse. This means pulling in [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing)
-, [Optical Character Recognition](https://en.wikipedia.org/wiki/Optical_character_recognition), and a variety of data
+masse. This means pulling in [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing), 
+[Optical Character Recognition](https://en.wikipedia.org/wiki/Optical_character_recognition), and a variety of data
 transformation, storage, and visualization systems.
 
 Similarly, for knowledge capture to occur [ontologies](https://en.wikipedia.org/wiki/Ontology#Information_science) will
@@ -110,7 +110,9 @@ graph structure will allow the application of [graph theory](https://en.wikipedi
 the problem.
 <img src="ontology.png" alt="Ontology" style="float: left" />
 
-----
+
+------------------
+
 
 # Status
 
