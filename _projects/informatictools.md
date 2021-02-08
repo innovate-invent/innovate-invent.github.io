@@ -24,8 +24,8 @@ data science is that it is very new and much like the wild west. Sometimes I won
 dealing with some issues I have to address on a daily basis. To get you up to speed, understand that there are three
 main aspects to working with data:
 
-### The data
-(duh) is problematic because there are a million different formats, with varying levels of structure, and
+### The data (duh)
+is problematic because there are a million different formats, with varying levels of structure, and
 loosely follow some poorly if not ad hoc defined schemas. This means that if you want to run a program on a piece of
 data, you have to interconvert it between different variants of the same format. This often turns into manually editing
 the file. Many of the formats are text based and encode data as text, this gives rise to many free-form variants,
@@ -60,8 +60,5 @@ is less inherently a problem and more just dealing with the variety of environme
 restrictions that each one places.
 
 ### The pipeline
-, yes I can count, ..... TODO
+yes I can count, ..... TODO
 
-<style>
-.page_content h3 { display: inline-block; }
-</style>
