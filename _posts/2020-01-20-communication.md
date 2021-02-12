@@ -15,3 +15,5 @@ So if I’m an artist, and I can put this into words and convince everybody that
 letters ever written, they say "All right, okay, we’ll admit it, you really do love her."
  
 But supposing you’re not very articulate?
+
+<audio controls src="/assets/posts/2020-01-20-communication/suppose_you_are_not_very_articulate.ogg" />
