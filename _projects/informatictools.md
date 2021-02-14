@@ -21,15 +21,16 @@ describing processes.
 This project outline is going to be very difficult to not seem ranty as it addresses a number of my daily professional
 pains. The exciting part of data science is that it is still very new and much like the wild west. The horrible part of
 data science is that it is very new and much like the wild west. Sometimes I wonder if Polio would be better than
-dealing with some issues I have to address on a daily basis. To get you up to speed, understand that there are three
-main aspects to working with data:
+dealing with some issues I have to address on a daily basis. To get you up to speed, understand that there are four main
+aspects to working with data:
 
 ### The data (duh)
-is problematic because there are a million different formats, with varying levels of structure, and
-loosely follow some poorly if not ad hoc defined schemas. This means that if you want to run a program on a piece of
-data, you have to interconvert it between different variants of the same format. This often turns into manually editing
-the file. Many of the formats are text based and encode data as text, this gives rise to many free-form variants,
-including using different text cases (upper vs lower) and value identifiers that are synonyms of each other.
+
+is problematic because there are a million different formats, with varying levels of structure, and loosely follow some
+poorly if not ad hoc defined schemas. This means that if you want to run a program on a piece of data, you have to
+interconvert it between different variants of the same format. This often turns into manually editing the file. Many of
+the formats are text based and encode data as text, this gives rise to many free-form variants, including using
+different text cases (upper vs lower) and value identifiers that are synonyms of each other.
 
 Other than the data document itself there are storage requirements that have to be met. Data security is vital if you
 are ever working with human data, with legal implications if you mess up. This means that moving data from one compute
@@ -45,20 +46,41 @@ being written to millions of times per second. It is usually a process of trial 
 accesses the data. Meaning you have to start processing the data, wait for the system to explode, move the data to a
 more appropriate location, rinse, repeat.
 
-### The tools 
-are the largest part of the problem. They are often written by students with little to none of the
-practices you might expect of a professional programmer. Documentation is usually sparse if it exists, and the code is
-usually written by someone who wanted to get creative with code structure. Many of the tools are also decades old, and
-still in use because the algorithm they implement is conceptually very useful despite the implementation. Software that
-has been optimised generally optimises for the wrong things and put huge demands on a single compute node. The chosen
-language that the software was written in is often completely inappropriate for its purpose, and there is an
-unmanageable variety of dependencies each language ecosystem pulls in. Some software even has undeclared dependencies
-that require low level hacking to determine why it works on some systems and not others.
+### The tools
 
-### The infrastructure 
-is less inherently a problem and more just dealing with the variety of environments and
-restrictions that each one places.
+are the largest part of the problem. They are often written by students with little to none of the practices you might
+expect of a professional programmer. Documentation is usually sparse if it exists, and the code is usually written by
+someone who wanted to get creative with code structure. Many of the tools are also decades old, and still in use because
+the algorithm they implement is conceptually very useful despite the implementation. Software that has been optimised
+generally optimises for the wrong things and put huge demands on a single compute node. The chosen language that the
+software was written in is often completely inappropriate for its purpose, and there is an unmanageable variety of
+dependencies each language ecosystem pulls in. Some software even has undeclared dependencies that require low level
+hacking to determine why it works on some systems and not others.
+
+### The infrastructure
+
+is less inherently a problem and more just dealing with the variety of environments and restrictions that each one
+places.
 
 ### The pipeline
-yes I can count, ..... TODO
 
+attempts to manage all the above. While not necessary, when working with large volumes of data it is often important to
+automate the tasks of running tools on datasets, in series. There are a number of solutions available that provide
+mechanisms and abstractions to describe and manage the previously mentioned elements. Most of these solutions are very
+constrained to support a narrow selection of infrastructures, are ignorant of the data as they execute tools, or force
+the user to describe the pipeline in a proprietary format. Many solutions can be quite cumbersome to set up and
+maintain, require tight integration with the infrastructure, or place strict requirements on the infrastructure.
+
+Any effective solution needs to address the whole problem and provide an integrated solution to all the above.
+
+## What exists
+
+<!-- TODO
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415281/
+
+https://solutionsreview.com/business-intelligence/the-best-data-science-and-machine-learning-platforms/
+
+KNIME
+-->
+
+At the time of writing this the most mature solutions in this domain were Galaxy, SnakeMake, Nextflow, CWL, WDL, 
