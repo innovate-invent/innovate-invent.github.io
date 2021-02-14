@@ -1,5 +1,6 @@
 ---
-permalink: /about/ title: About
+permalink: /about/  
+title: About  
 ---
 
 I am a polymath, with experience working in a wide variety of roles. You may have already discovered browsing this site
