@@ -7,7 +7,7 @@ published: false tags: deaf hearing loss signlanguage education communication is
 # Sign language assist
 
 I accidentally graduated with a certificate in business and part of that had me identify underserved markets. This
-project exists to leverage many of my skills into a real world solution that affects everyday people.
+project exists to leverage many of my skills into a real world solution for the benefit of everyday people.
 
 **Note: This is a live document and will be expanded upon as this project progresses**
 
