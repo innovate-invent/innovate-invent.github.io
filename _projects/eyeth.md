@@ -4,6 +4,15 @@ author_profile: true
 published: false tags: deaf hearing loss signlanguage education communication isolation community
 ---
 
+# Sign language assist
+
+I accidentally graduated with a certificate in business and part of that had me identify underserved markets. This
+project exists to leverage many of my skills into a real world solution that affects everyday people.
+
+**Note: This is a live document and will be expanded upon as this project progresses**
+
+## The people
+
 We get 5 senses in life, sometimes 6 if you count common sense, but for many it is even fewer. Sensory loss cuts people
 off from the world, from others, and from the human experience. You can lose your sense of smell or taste and lose the
 enjoyment of foods and flowers, but daily life won't penalise you for it. The organ responsible for your sense of touch
