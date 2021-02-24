@@ -12,6 +12,9 @@ it. You sense of sight can be lost, and that would be debilitating, it would ser
 and perceive the world around you. Losing your sense of hearing is possibly the most impactful loss for a human, it cuts
 us off from others. Other people, the interaction, the interdependence, the shared experience is vital.
 
+Over 70 million people in the world use sign language as their main language. 5.5 million of them are functionally deaf
+children.
+
 Research at the U.S. National Institute on Deafness and Other Communication Disorders has shown a significant
 association between hearing/speech impairments and moderate to severe depression.
 
@@ -30,6 +33,10 @@ educate them, or keeping them in a local school where they will struggle to lear
 People have tried to find technological solutions in the past, all very similar, but they have all failed because they
 did not address the whole problem. A technical solution is needed because social solutions are limited and difficult to
 replicate.
+
+<img src="competition_matrix.png" alt="Competition matrix" />
+
+<img src="ASL.png" alt="ASL" />
 
 <!--
 https://www.gettingsmart.com/2016/08/10-challenges-deaf-students-face-in-the-classroom/
