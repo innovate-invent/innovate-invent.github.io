@@ -97,7 +97,7 @@ Given the ambitious scale of this project, it demands some level of automation t
 all recipes are stored in loosely structured natural language (English, French, etc.). Many of which are not even
 encoded as text in a computer readable format (Books and images). Technologies need to be leveraged to automate much of
 the task of codifying and restructuring the information in a format that allows computers to manipulate the data en
-masse. This means pulling in [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing), 
+masse. This means pulling in [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing),
 [Optical Character Recognition](https://en.wikipedia.org/wiki/Optical_character_recognition), and a variety of data
 transformation, storage, and visualization systems.
 
@@ -106,13 +106,77 @@ need to be used if not created. Luckily [existing projects](https://www.nature.c
 already started this work. It is important to leverage as much existing work as possible, greater success can be found
 by standing on the backs of giants. An ontology will give a structure for defining the processes in terms of the
 underlying concepts, materials, their properties, and all the variations thereof. Collection of the processes into a
-graph structure will allow the application of [graph theory](https://en.wikipedia.org/wiki/Graph_theory) to help reduce
-the problem.
+graph structure will allow the application of [graph theory](https://en.wikipedia.org/wiki/Graph_theory)
+/[first order logic](https://en.wikipedia.org/wiki/First-order_logic) to help reduce the problem.
 <img src="ontology.png" alt="Ontology" style="float: left" />
+
+# Recipe complexity
+
+The plan is to collect recipes from both books and websites, each source providing its own challenges. Books require
+capturing text from images, while also retaining the location of the text within the image. The spacial information of
+the text allows making decisions on the relationships and meaning of the information. This is especially important when
+trying to extract tabular data which an OCR solution may not be aware of. This also provides the opportunity of
+predefining document layout patterns that would allow the automatic exclusion of extraneous text.
+
+Websites pose a more varied challenge in that some sites take measures to protect their recipes from being automatically
+scraped. Recipes can be rendered by the browser or pre-rendered and transmitted as an image. It could potentially be
+easier to convert websites to images and process them through the same pipelines developed for books. Only retaining
+HTML data for the purpose of providing hints to the OCR and data cleaning stages.
+
+At each stage of the collection process, data that is collected from different sources should need to be prioritised.
+Aiming to capture 100% of the available recipes will likely have diminishing returns. The target should never be 100%
+capture or 100% automation. If effort is made to gather as many recipes as possible at the outset then the data capture
+pipeline will only exist to process that data. New or undiscovered recipes that are deemed important can always be
+manually captured afterwards. The initial database can also be used to inform more effective capture methods in the
+future.
+
+## Ingredients
+
+Before NLP is applied, the capture problem needs to be further simplified by identifying and isolating the ingredients
+and directions. The ingredients will mostly be presented as structured text, either a table or list, requiring a
+different set of heuristics. Quantity, unit, name, brand, annotations, and alternatives are potentially present for each
+ingredient line. The first two can likely be captured with a simple regular expression while a collection of heuristics
+will likely be needed to capture the semi structured remaining fields.
+
+## Directions
+
+Interpreting the directions is where NLP techniques will likely be most potent, but not before employing some heuristics
+to differentiate paragraph form vs list form. Even then, NLP won't immediately solve the task of determining the
+temporal relationship of tasks. Recipes rarely have an entirely serialized series of steps, there are tasks that should
+be described as asynchronous. A dependency chain of events described in the recipe directions needs to be eluded from
+the noun-verb information along with the textual ordering. Directions will also list criteria for the progression of the
+steps, sometimes described explicitly, sometimes described with a simple adjective. An ad hoc approach should generally
+be followed, refined until an acceptable number of recipes have been captured at an acceptable level of ambiguity.
+
+## Good enough
+
+Even if the goal was to capture 100% of the recipes, a measure of the fidelity of the generated database will need to be
+established and automated. Validation is potentially a more time-consuming task than capture and needs to be automated.
+
+Methods to do this can include:
+
+- aberration detection of ingredients and their quantities between similar recipes or globally
+- establishing ingredients with rational proportions to other ingredients independent of any recipe
+- simple time and temperature thresholds
+- outlier detection via clustering of processes and ingredients
+- correlation of interdependent quantities extracted with a recipe (total prep time vs. sum of times of steps, mass of
+  ingredients vs predicted mass of products)
+- comparison to a manually curated subset of recipes, selected to maximize commonalities with the full dataset
+
+The goal of these measures would be to flag captured recipes for manual review. The ingestion process can be iteratively
+refined based on these measures until a satisfactory level is reached, possibly truncating the dataset at a desired
+threshold.
+
+# Additional sources
+
+The recipes themselves only describe what to do with the ingredients. Additional information about the variations of
+ingredients, significance, and tolerances also need to be established. The same goes for the processes, a recipe may
+describe a process (such as mixing, folding, chopping, searing), but the specific recipe requirements of that process,
+or what exactly the process is accomplishing, also needs to be specified.
+
 
 
 ------------------
-
 
 # Status
 
@@ -121,6 +185,6 @@ This project is currently waiting for time to be freed up from other ongoing pro
 ## TODO
 
 - Collect as many cooking recipes as possible in any format available
-- Evaluate requirements for data ingestion and sanitization
+- Evaluate unanticipated requirements for data ingestion and sanitization
 - Preliminary data characterization and curation
 - Secure funding for a molecular gastronomist and professional chef (same person?)
