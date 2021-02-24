@@ -15,6 +15,8 @@ us off from others. Other people, the interaction, the interdependence, the shar
 Over 70 million people in the world use sign language as their main language. 5.5 million of them are functionally deaf
 children.
 
+<img src="population.png" alt="The deaf population is increasing" />
+
 Research at the U.S. National Institute on Deafness and Other Communication Disorders has shown a significant
 association between hearing/speech impairments and moderate to severe depression.
 
@@ -23,6 +25,8 @@ people, whether in family situations, social gatherings or at work."
 
 This matters to us because mental health in the deaf community is a big concern. The deaf are more likely to suffer from
 depression and anxiety because of lack of human interaction.
+
+<img src="studentscore.png" alt="Students with hearing impairments score lower" />
 
 In the United State, the percentage of grade 9 students with hearing impairments who earned a standard diploma after 4
 years was 24% lower than that of all students.
