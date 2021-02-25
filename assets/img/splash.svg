@@ -973,11 +973,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="372.68642"
-     inkscape:cy="714.33976"
+     inkscape:zoom="1"
+     inkscape:cx="1054.0139"
+     inkscape:cy="685.48761"
      inkscape:document-units="px"
-     inkscape:current-layer="g11179"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
@@ -994,7 +994,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1043,7 +1043,7 @@
         <text
            xml:space="preserve"
            id="text2333"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2335);fill:#000000;fill-opacity:1;stroke:none"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2335);fill:#000000;fill-opacity:1;stroke:none;"
            transform="translate(-151.61773,-22.780923)"><tspan
              x="378.57031"
              y="113.89291"><tspan
@@ -1051,7 +1051,7 @@
         <text
            xml:space="preserve"
            id="text2339"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2341);fill:#000000;fill-opacity:1;stroke:none"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2341);fill:#000000;fill-opacity:1;stroke:none;"
            transform="translate(-1.419595,16.208719)"><tspan
              x="238.7207"
              y="72.646814"><tspan
@@ -1059,7 +1059,7 @@
         <text
            xml:space="preserve"
            id="text2345"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2347);fill:#000000;fill-opacity:1;stroke:none"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2347);fill:#000000;fill-opacity:1;stroke:none;"
            transform="translate(-57.22819,46.284058)"><tspan
              x="294.5293"
              y="47.672205"><tspan
@@ -1306,7 +1306,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">01101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011011010101101101010110110101011</textPath></text>
       <path
          style="display:none;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 157.75431,19.678461 c -28.78425,138.426049 115.76489,23.394332 -5.68975,33.596616 -47.68224,4.005345 -47.27368,24.213812 -31.05352,43.789666 7.37376,16.503497 -20.26556,24.623497 -1.19335,45.598317 13.81232,9.20357 24.19994,13.60927 55.41096,14.0141"
+         d="m 157.75431,19.678461 c -28.78425,138.426049 115.76489,23.394332 -5.68975,33.596616 -47.68224,4.005345 -47.27368,24.213812 -31.05352,43.789666 7.37376,16.503497 -20.26556,24.623497 -1.19335,45.598317 13.81232,9.20357 24.71637,15.49376 55.92739,15.89859"
          id="path7977"
          sodipodi:nodetypes="csccc" />
     </g>
