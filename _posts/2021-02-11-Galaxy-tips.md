@@ -1,13 +1,13 @@
 ---
-title: Tips and tricks for Galaxy
-excerpt: Some interesting concepts and techniques within Galaxy pipelines  
+title: Tips and tricks for Galaxy excerpt: Some interesting concepts and techniques within Galaxy pipelines  
 tags: galaxy project pipeline workflow tips tricks control flow  
-published: true
+published: true  
+toc: true  
 ---
 
 My years of experience working with the Galaxy analysis platform has yielded a useful bag of tricks and tools that I
 would like to share. This is intended to be an overview more than a tutorial, but please don't hesitate to contact me if
-you have anything you would like to add. I hope you find something useful here.
+you have anything you would like to add or is unclear. I hope you find something useful here.
 
 ## Intro to Galaxy
 
@@ -29,7 +29,8 @@ descriptions as code. This means that you would have to either write a complex s
 pipeline to another solutions format, or manually reimplement the pipeline. Manually reimplementing the pipeline is
 always going to be plagued with mistakes and failure to capture subtle or implicit functionality.
 
-If you would like to play with Galaxy, one of a number of freely available instances is [https://usegalaxy.org/](https://usegalaxy.org/)
+If you would like to play with Galaxy, one of a number of freely available instances
+is [usegalaxy.org](https://usegalaxy.org/)
 
 ## Intro to collections
 
@@ -38,12 +39,13 @@ concept of a list of datasets is not particularly revolutionary, but Galaxies be
 mundane use is for tools to require a collection of datasets to operate on. This requirement is specified in the tools
 wrapper and Galaxy ensures that the tool gets what it wants. Galaxy extends this to allow describing collections of
 pairs of datasets (list:pair) which is tremendously important when a tool wants to operate on pairs of related datasets
-such as what is output from double ended DNA sequencing. Collections can be extended even further to allow for
-collections of collections, which allows you to maintain subgroups of collections within a collection (list:list or
-list:list:list). It is important to know that collections are ordered, and operations are available to sort or modify
-that order. Most [Galaxy instances](https://usegalaxy.org/) provide these operations under the "Collection Operations"
+such as what is output from double ended DNA sequencing.
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/collection_operations.png" alt="Galaxy GNU Awk wrapper" style="float: right; max-width: 25em"/>
+Collections can be extended even further to allow for collections of collections, which allows you to maintain subgroups
+of collections within a collection (list:list or list:list:list). It is important to know that collections are ordered,
+and operations are available to sort or modify that order. Most [Galaxy instances](https://usegalaxy.org/) provide these
+operations under the "Collection Operations"
 section of its tool panel. It is beneficial to become familiar with all of them while setting out to create a workflow.
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/collection_operations.png" alt="Galaxy GNU Awk wrapper" style="float: right; max-width: 30em"/>
 
 The real magic is when you try to pass a collection of various types to a tool that is not expecting a collection, or
 collection of collections. This magic is referred to as "mapping over" a collection to a tool. If you pass a collection
@@ -86,7 +88,7 @@ exists, and I hope to produce a patch for it soon enough. The vulnerability allo
 host system. In the meantime, this is not much of an issue for a properly containerised deployment. See
 the [--sandbox](https://www.gnu.org/software/gawk/manual/html_node/Options.html) argument for more information.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript.png" alt="Galaxy GNU Awk wrapper" style="float: left; max-width: 30em"/>
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript.png" alt="Galaxy GNU Awk wrapper" style="float: left; max-width: 15em"/>
 Since then, I have created the [Galaxy AWKScript wrapper](https://toolshed.g2.bx.psu.edu/view/brinkmanlab/awkscript/).
 The wrapper forwards a number of very useful bits of information from the related Galaxy objects to gawk. Within the gawk
 environment a variable 'tool_input' will be set to the index of the wrapper inputs, in order. You can combine this with
@@ -95,6 +97,8 @@ operating on and its position in any possible input collection. A variable 'tool
 current inputs dataset name or collection id. Beware that ARGIND will increment 3 between inputs as one is consumed
 setting tool_input and another setting tool_input_id and the third to specify the input file. Something to note is that 
 while Galaxy provides a dataset name to tool wrappers, it [does not provide collection names](https://github.com/galaxyproject/galaxy/issues/11606).
+
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs" style="float: right; max-width: 20em"/>
 
 The following script demonstrates the information provided by the tool wrapper to gawk. The tool is provided with a
 collection input with three elements, and a single dataset input. Additionally, two environment variables were included.
@@ -112,8 +116,6 @@ BEGINFILE {
 }
 ```
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs" style="float: right; max-width: 30em"/>
-
 Output:
 
 ```
@@ -129,7 +131,7 @@ tool_input	ARGIND	tool_input_id
 As you can see, dataset1/2/3 are the collection element identifiers for the collection provided to input 0.
 single_dataset is the name of the dataset provided to input 1. env1/2 were provided to the script via the ENVIRON
 global.
-[Download](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/AWKScript_demo.ga) the demo workflow to test it
+[Download](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/AWKScript_demo.ga) this demo workflow to test it
 yourself.
 
 <img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_inputs.png" alt="Galaxy GNU Awk wrapper inputs" style="float: right; max-width: 30em"/>
@@ -141,8 +143,8 @@ The wrapper inputs provide the ability to specify if they accept single inputs o
 This is very useful when trying to get a specific collection mapping behavior. If you attach an optional workflow input
 to the input of this tool, the tool will run regardless of the input. If there is no input provided the BEGIN rule will
 be executed, but the BEGINFILE and subsequent rules will not.
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_inputs.png" alt="Galaxy GNU Awk wrapper inputs" style="float: left; max-width: 10em"/>
-If you click the <-> icon on an Environment Variable value input, it will allow you to provide the value as a tool input
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/module_connection.png" alt="Galaxy GNU Awk wrapper input module connection" style="float: left; max-width: 10em"/>
+If you click the ⬌ icon on an Environment Variable value input, it will allow you to provide the value as a tool input
 from a workflow Simple Parameter Input.
 
 This tool allows you to embed scripting logic within a workflow that is aware of the various properties of the workflow
@@ -214,10 +216,10 @@ Many more combinations of the tools is possible, providing any functionality you
 
 ### Not limited to dataset inputs
 
-"Parse parameter value from dataset" tool is generally found under the Expression Tools section. It allows you to
+The "Parse parameter value from dataset" tool is generally found under the Expression Tools section. It allows you to
 convert a dataset contents to a value that can be used for any tool parameter. Combining this with the AWKScript (or any
 other tool that can output a single value) allows you to specify tool parameters at runtime. To change a tool parameter
-to accept a value from the workflow, simply click the <-> icon above the input.
+to accept a value from the workflow, simply click the ⬌ icon above the input.
 
 <img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/mcl.png" alt="Galaxy workflow demonstrating specifying tool parameter at runtime" />
 In this example, the input to a tool is first evaluated by the AWK Script to determine the "Inflation" value desired for 
@@ -230,25 +232,28 @@ collections using the Build List tool. What if you want to generate some of the 
 advantage of the advanced mapping properties previously mentioned? This is where the "Apply rules to collection" tool
 comes in.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/apply_rules.png" alt="Apply rules to collection modal"  />
-It is a tool that allows you to rework an existing collection into a completely different collection structure. Take 
-special note of its "Split Columns" rule, along with the "Regular Expression", and "Concatenate Columns" column creation options.
-They can be leveraged against the way the Flatten Collection tool generates collection element identifiers for some useful transformations.
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/apply_rules.png" alt="Apply rules to collection modal" />
+
+It is a tool that allows you to rework an existing collection into a completely different collection structure. Take
+special note of its "Split Columns" rule, along with the "Regular Expression", and "Concatenate Columns" column creation
+options. They can be leveraged against the way the Flatten Collection tool generates collection element identifiers for
+some useful transformations.
 
 <img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/rules_wrench.png" alt="Apply rules to collection rule json" style="float: left; max-width: 10em" />
-An easily overlooked feature of this tool is its JSON view of the rules. This allows you to quickly copy/paste a rule set 
-into and out of the tool for reuse. If you plan to use this tool in a workflow, I recommend you manually generate a input 
-collection and build the rules using its dynamic preview feature. This only appears when viewing the tool outside of the 
-workflow editor. Once you are done generating the rules, open the JSON view and copy them out and paste into the JSON view of 
-the tool inserted in your workflow.
+An easily overlooked feature of this tool is its JSON view of the rules. Click the 🔧 to open it. This allows you to quickly 
+copy/paste a rule set into and out of the tool for reuse. If you plan to use this tool in a workflow, I recommend you 
+manually generate a input collection and build the rules using its dynamic preview feature. This only appears when viewing 
+the tool outside of the workflow editor. Once you are done generating the rules, open the JSON view and copy them out and 
+paste into the JSON view of the tool inserted in your workflow.
 
-[This example](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/listlist_from_list.rule) simply demonstrates how to
-generate a list:list from a list. This can be useful when you want to map over a tool that already accepts a collection.
+Copy and paste [this example](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/listlist_from_list.rule) to
+demonstrate how to generate a list:list from a list. This can be useful when you want to map over a tool that already
+accepts a collection.
 
 A more interesting [rule set](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/pairwise.rule) takes a list of
 datasets (A,B,C,D) and produces a list:list of those datasets in a pairwise combination ([A,B],[B,C],[C,D]). If a tool
-accepts a collection, it will be mapped over this list:list, where each invocation receives a pair. This is different 
-from the way a list:pair collection works. A list:pair generally wants to evaluate as ([A,B],[C,D]) where each pair has 
+accepts a collection, it will be mapped over this list:list, where each invocation receives a pair. This is different
+from the way a list:pair collection works. A list:pair generally wants to evaluate as ([A,B],[C,D]) where each pair has
 an exclusive relationship between the datasets.
 
 ## Writing your own tool wrappers
@@ -261,7 +266,16 @@ dangerous of a tool to distribute via the toolshed. **DO NOT INSTALL THIS TOOL O
 the critical secrets of the Galaxy deployment and system. This tool also does everything that a tool wrapper should
 never do and will likely need to be tweaked depending on the version of Galaxy it is installed to before it will run.
 
-A tool wrapper command is compiled using
+Be sure to check out Galaxies [documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html)
+for the tool XML file as your starting place when developing a wrapper. It isn't well advertised in the Galaxy
+documentation, but a tool wrapper command is compiled using
 the [Cheetah Template Engine](https://pythonhosted.org/Cheetah/users_guide/language.html) and all the engines features
-are available. Be sure to check out Galaxies [documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html)
-for the tool XML file as your starting place when developing a wrapper. 
+are available.
+
+## Conclusion
+
+Hopefully by this point you have everything you need to start creating robust, well-formed pipelines. There are a
+million more tiny little features scattered about Galaxy that can be quite useful, and I encourage you to explore.
+
+If you need help with a tool or specific use case of Galaxy, I recommend you visit the official [help forum](https://help.galaxyproject.org).
+There is also a friendly community of Galaxy users and developers hanging out in the [Galaxy Gitter](https://gitter.im/galaxyproject/Lobby).
