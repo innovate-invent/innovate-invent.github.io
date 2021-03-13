@@ -1,0 +1,188 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "Flow control",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "bottom": 361.3999938964844,
+                "height": 64.89999389648438,
+                "left": 616.4833374023438,
+                "right": 766.4833374023438,
+                "top": 296.5,
+                "width": 150,
+                "x": 616.4833374023438,
+                "y": 296.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "24f137ec-c1ed-46da-860d-9b3896e29b20",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "2b2db8bc-76d6-41c2-a6a6-61dedecfce4a"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "Input parameter",
+            "outputs": [],
+            "position": {
+                "bottom": 465.6666717529297,
+                "height": 49.68333435058594,
+                "left": 619.5,
+                "right": 769.5,
+                "top": 415.98333740234375,
+                "width": 150,
+                "x": 619.5,
+                "y": 415.98333740234375
+            },
+            "tool_id": null,
+            "tool_state": "{\"restrictions\": [\"yes\", \"no\"], \"parameter_type\": \"text\", \"optional\": false}",
+            "tool_version": null,
+            "type": "parameter_input",
+            "uuid": "980c09b2-5f08-45f6-859c-23e0ebbdd521",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "fcb55418-d724-43d6-850b-b0b5c03a7939"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "envs_0|val": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "infiles_0|input_type_selection|infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "AWK Script",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 507.8666687011719,
+                "height": 131.88333129882812,
+                "left": 854.5,
+                "right": 1004.5,
+                "top": 375.98333740234375,
+                "width": 150,
+                "x": 854.5,
+                "y": 375.98333740234375
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "tool_shed_repository": {
+                "changeset_revision": "df0c8f33c8ea",
+                "name": "awkscript",
+                "owner": "brinkmanlab",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"code\": \"\", \"envs\": [{\"__index__\": 0, \"name\": \"input\", \"val\": {\"__class__\": \"ConnectedValue\"}}], \"infiles\": [{\"__index__\": 0, \"input_type_selection\": {\"multiple\": \"true\", \"__current_case__\": 1, \"infile\": {\"__class__\": \"RuntimeValue\"}}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "1a0e4fe4-573b-4923-b300-b06395d4b90f",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "__FILTER_FROM_FILE__",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "how|filter_source": {
+                    "id": 2,
+                    "output_name": "outfile"
+                },
+                "input": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Filter List",
+            "outputs": [
+                {
+                    "name": "output_filtered",
+                    "type": "input"
+                },
+                {
+                    "name": "output_discarded",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 484.48333740234375,
+                "height": 172.48333740234375,
+                "left": 1093.4833984375,
+                "right": 1243.4833984375,
+                "top": 312,
+                "width": 150,
+                "x": 1093.4833984375,
+                "y": 312
+            },
+            "post_job_actions": {},
+            "tool_id": "__FILTER_FROM_FILE__",
+            "tool_state": "{\"how\": {\"how_filter\": \"remove_if_absent\", \"__current_case__\": 0, \"filter_source\": {\"__class__\": \"ConnectedValue\"}}, \"input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "67c9c906-a441-4b77-876f-45dda7efd6dc",
+            "workflow_outputs": [
+                {
+                    "label": "input dataset(s) (filtered)",
+                    "output_name": "output_filtered",
+                    "uuid": "197b2d0d-f0b3-461a-8514-a2587a9eac9c"
+                },
+                {
+                    "label": "input dataset(s) (discarded)",
+                    "output_name": "output_discarded",
+                    "uuid": "e1b3bb24-a237-49ef-aef2-3a313c6e86e2"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "b3c6f3c7-9723-48c4-84ff-a42dd1380265",
+    "version": 1
+}

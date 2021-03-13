@@ -1,0 +1,262 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "AWKScript demo",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "AWK Script",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 215.18333435058594,
+                "height": 49.68333435058594,
+                "left": 482,
+                "right": 632,
+                "top": 165.5,
+                "width": 150,
+                "x": 482,
+                "y": 165.5
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "tool_shed_repository": {
+                "changeset_revision": "df0c8f33c8ea",
+                "name": "awkscript",
+                "owner": "brinkmanlab",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"code\": \"BEGIN { print \\\"Hello World!\\\" }\", \"envs\": [], \"infiles\": [], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.1",
+            "type": "tool",
+            "uuid": "9b0f59f3-bd6a-47c9-9db9-7c583850653f",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "AWK Script",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 415.18333435058594,
+                "height": 49.68333435058594,
+                "left": 745,
+                "right": 895,
+                "top": 365.5,
+                "width": 150,
+                "x": 745,
+                "y": 365.5
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                },
+                "RenameDatasetActionoutfile": {
+                    "action_arguments": {
+                        "newname": "single_dataset"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "tool_shed_repository": {
+                "changeset_revision": "df0c8f33c8ea",
+                "name": "awkscript",
+                "owner": "brinkmanlab",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"code\": \"BEGIN {\\nprint \\\"dataset1\\\";\\nprint \\\"dataset2\\\";\\nprint \\\"dataset3\\\";\\n}\", \"envs\": [], \"infiles\": [], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.1",
+            "type": "tool",
+            "uuid": "e7696fa0-744d-4ab0-9f15-9141390c2a3b",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "__BUILD_LIST__",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "datasets_0|input": {
+                    "id": 0,
+                    "output_name": "outfile"
+                },
+                "datasets_1|input": {
+                    "id": 0,
+                    "output_name": "outfile"
+                },
+                "datasets_2|input": {
+                    "id": 0,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Build List",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 307.3833312988281,
+                "height": 141.88333129882812,
+                "left": 739,
+                "right": 889,
+                "top": 165.5,
+                "width": 150,
+                "x": 739,
+                "y": 165.5
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "__BUILD_LIST__",
+            "tool_state": "{\"datasets\": [{\"__index__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 2, \"input\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.1.0",
+            "type": "tool",
+            "uuid": "04629ed7-55e1-466e-a85a-1aeafcc28397",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "__RELABEL_FROM_FILE__",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "how|labels": {
+                    "id": 1,
+                    "output_name": "outfile"
+                },
+                "input": {
+                    "id": 2,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Relabel List Identifiers",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 373.8000030517578,
+                "height": 131.8000030517578,
+                "left": 979,
+                "right": 1129,
+                "top": 242,
+                "width": 150,
+                "x": 979,
+                "y": 242
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "__RELABEL_FROM_FILE__",
+            "tool_state": "{\"how\": {\"how_select\": \"txt\", \"__current_case__\": 0, \"labels\": {\"__class__\": \"ConnectedValue\"}, \"strict\": \"false\"}, \"input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "8ea33cba-7389-4097-aea0-1181a53983f3",
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "infiles_0|input_type_selection|infile": {
+                    "id": 3,
+                    "output_name": "output"
+                },
+                "infiles_1|input_type_selection|infile": {
+                    "id": 1,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "AWK Script",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 456.3833312988281,
+                "height": 131.88333129882812,
+                "left": 1174,
+                "right": 1324,
+                "top": 324.5,
+                "width": 150,
+                "x": 1174,
+                "y": 324.5
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/brinkmanlab/awkscript/awkscript/1.1",
+            "tool_shed_repository": {
+                "changeset_revision": "df0c8f33c8ea",
+                "name": "awkscript",
+                "owner": "brinkmanlab",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"code\": \"BEGIN {\\n  for (e in ENVIRON) {\\n     print \\\"ENVIRON[\\\"e\\\"] = \\\" ENVIRON[e];\\n  }\\n  print \\\"tool_input\\\", \\\"ARGIND\\\", \\\"tool_input_id\\\";\\n}\\nBEGINFILE {\\n  print tool_input, ARGIND, tool_input_id;\\n  nextfile;\\n}\", \"envs\": [{\"__index__\": 0, \"name\": \"env1\", \"val\": \"val1\"}, {\"__index__\": 1, \"name\": \"env2\", \"val\": \"val2\"}], \"infiles\": [{\"__index__\": 0, \"input_type_selection\": {\"multiple\": \"true\", \"__current_case__\": 1, \"infile\": {\"__class__\": \"ConnectedValue\"}}}, {\"__index__\": 1, \"input_type_selection\": {\"multiple\": \"false\", \"__current_case__\": 0, \"infile\": {\"__class__\": \"ConnectedValue\"}}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.1",
+            "type": "tool",
+            "uuid": "e98a1fd2-5f87-4db8-ab1b-0e173ba7f519",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "outfile",
+                    "uuid": "bb0587d0-f0d0-447b-8687-adef2a83001f"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "90e63845-96ed-4a0e-8404-62cc7b4b199d",
+    "version": 5
+}
