@@ -243,7 +243,7 @@ some useful transformations.
 An easily overlooked feature of this tool is its JSON view of the rules. Click the 🔧 to open it. This allows you to quickly 
 copy/paste a rule set into and out of the tool for reuse. If you plan to use this tool in a workflow, I recommend you 
 manually generate a input collection and build the rules using its dynamic preview feature. This only appears when viewing 
-the tool outside of the workflow editor. Once you are done generating the rules, open the JSON view and copy them out and 
+the tool outside of the workflow editor. Once you are done generating the rules, open the JSON view, copy them out, and 
 paste into the JSON view of the tool inserted in your workflow.
 
 Copy and paste [this example](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/listlist_from_list.rule) to
