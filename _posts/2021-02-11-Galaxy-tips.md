@@ -90,7 +90,7 @@ exists, and I hope to produce a patch for it soon enough. The vulnerability allo
 host system. In the meantime, this is not much of an issue for a properly containerised deployment. See
 the [--sandbox](https://www.gnu.org/software/gawk/manual/html_node/Options.html) argument for more information.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript.png" alt="Galaxy GNU Awk wrapper" style="float: left; max-width: 15em"/>
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript.png" alt="Galaxy GNU Awk wrapper" style="float: left; max-width: 10em"/>
 Since then, I have created the [Galaxy AWKScript wrapper](https://toolshed.g2.bx.psu.edu/view/brinkmanlab/awkscript/).
 The wrapper forwards a number of very useful bits of information from the related Galaxy objects to gawk. Within the gawk
 environment a variable 'tool_input' will be set to the index of the wrapper inputs, in order. You can combine this with
@@ -99,8 +99,6 @@ operating on and its position in any possible input collection. A variable 'tool
 current inputs dataset name or collection id. Beware that ARGIND will increment 3 between inputs as one is consumed
 setting tool_input and another setting tool_input_id and the third to specify the input file. Something to note is that 
 while Galaxy provides a dataset name to tool wrappers, it [does not provide collection names](https://github.com/galaxyproject/galaxy/issues/11606).
-
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs" style="float: right; max-width: 20em"/>
 
 The following script demonstrates the information provided by the tool wrapper to gawk. The tool is provided with a
 collection input with three elements, and a single dataset input. Additionally, two environment variables were included.
@@ -118,6 +116,7 @@ BEGINFILE {
 }
 ```
 
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs"/>
 Output:
 
 ```
@@ -136,7 +135,6 @@ global.
 [Download](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/AWKScript_demo.ga) this demo workflow to test it
 yourself.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_inputs.png" alt="Galaxy GNU Awk wrapper inputs" style="float: right; max-width: 30em"/>
 The environment inputs allow you to generalise your scripts, specifying constants with the tool invocation, or allow
 attaching simple workflow parameter inputs. Environment variables are accessible
 via [ENVIRON](https://www.gnu.org/software/gawk/manual/gawk.html#index-environment-variables_002c-in-ENVIRON-array).
@@ -190,7 +188,7 @@ The behaviour of this does not need to be bimodal, the script can contain any le
 collection are filtered. You can even inspect the contents of the file and make decisions. The Filter List tool can be
 chained as many times as needed to get the level of branching required.
 
-### Collection of one
+## Collection of one
 
 You may be thinking this is all great when working with collections of datasets, but most of your tools and workflows
 operate on single datasets. This all applies when you consider using a collection of size one. Your single dataset can
@@ -216,7 +214,7 @@ that is output by the AWK Script. The "Parse parameter value from dataset" tool 
 As you can see, manipulating collections with the output of the AWK Script tool can provide some powerful functionality.
 Many more combinations of the tools is possible, providing any functionality you might need.
 
-### Not limited to dataset inputs
+## Not limited to dataset inputs
 
 The "Parse parameter value from dataset" tool is generally found under the Expression Tools section. It allows you to
 convert a dataset contents to a value that can be used for any tool parameter. Combining this with the AWKScript (or any
