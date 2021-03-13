@@ -2,7 +2,7 @@
 title: Tips and tricks for the Galaxy  
 excerpt: Some interesting concepts and techniques within Galaxy pipelines  
 tags: galaxy project pipeline workflow tips tricks control flow  
-published: false
+published: true
 ---
 
 My years of experience working with the Galaxy analysis platform has yielded a useful bag of tricks and tools that I
