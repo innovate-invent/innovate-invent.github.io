@@ -197,7 +197,8 @@ attached. All tools do not need to be mapped over in a workflow to allow for flo
 that could possibly receive a collection of size zero. The Build List, Merge Collection, and Extract Dataset tools can
 be used to enter and exit conditional portions of the workflow.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/roundtrip.png" alt="Galaxy workflow demonstrating build, merge, extract" />
+<a href="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/roundtrip.png">
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/roundtrip.png" alt="Galaxy workflow demonstrating build, merge, extract" /></a>
 A single dataset is input into the Build List tool, which then outputs a collection of size one. The AWK script
 evaluates the dataset and outputs which tool it wants the Filter List tool to route the dataset to. The collection
 containing the output of whichever tool was executed is merged with the empty collection from the other tool. The
@@ -205,7 +206,8 @@ first (and only) dataset is then extracted from the collection as a single datas
 tool will error if it receives an empty collection. You can only use this technique for a workflow that always produces
 an output.
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/pick_one.png" alt="Galaxy workflow demonstrating picking a dataset from a collection" />
+<a href="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/pick_one.png">
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/pick_one.png" alt="Galaxy workflow demonstrating picking a dataset from a collection" /></a>
 This is a different take on the use of the Extract Dataset tool. The datasets produced by each 'Arbitrary tool' can be 
 evaluated with the intent of picking the most desirable one. Nothing here is mapped over, the collection output from 
 the Build List tool is sent directly to the Extract Dataset tool. The Extract Dataset tool is set to extract the element 
