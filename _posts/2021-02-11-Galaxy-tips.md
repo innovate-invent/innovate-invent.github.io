@@ -278,5 +278,7 @@ are available.
 Hopefully by this point you have everything you need to start creating robust, well-formed pipelines. There are a
 million more tiny little features scattered about Galaxy that can be quite useful, and I encourage you to explore.
 
+Check out the [Awesome Galaxy](https://github.com/galaxyproject/awesome-galaxy/) repository for a community maintained list of awesome Galaxy resources.
+
 If you need help with a tool or specific use case of Galaxy, I recommend you visit the official [help forum](https://help.galaxyproject.org).
 There is also a friendly community of Galaxy users and developers hanging out in the [Galaxy Gitter](https://gitter.im/galaxyproject/Lobby).
