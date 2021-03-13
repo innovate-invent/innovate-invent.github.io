@@ -29,7 +29,7 @@ descriptions as code. This means that you would have to either write a complex s
 pipeline to another solutions format, or manually reimplement the pipeline. Manually reimplementing the pipeline is
 always going to be plagued with mistakes and failure to capture subtle or implicit functionality.
 
-If you would like to play with Galaxy, one of a number of freely available instances is https://usegalaxy.org/
+If you would like to play with Galaxy, one of a number of freely available instances is [https://usegalaxy.org/](https://usegalaxy.org/)
 
 ## Intro to collections
 
