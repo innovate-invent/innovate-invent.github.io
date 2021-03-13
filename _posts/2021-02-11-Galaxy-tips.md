@@ -116,7 +116,7 @@ BEGINFILE {
 }
 ```
 
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs"/>
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/awkscript_demo.png" alt="Galaxy GNU Awk wrapper demo inputs" style="display: block;margin-left: auto;margin-right: auto;"/>
 Output:
 
 ```
