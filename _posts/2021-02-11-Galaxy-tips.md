@@ -1,5 +1,5 @@
 ---
-title: Tips and tricks for the Galaxy  
+title: Tips and tricks for Galaxy
 excerpt: Some interesting concepts and techniques within Galaxy pipelines  
 tags: galaxy project pipeline workflow tips tricks control flow  
 published: true
