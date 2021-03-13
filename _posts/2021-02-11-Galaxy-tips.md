@@ -97,7 +97,7 @@ environment a variable 'tool_input' will be set to the index of the wrapper inpu
 [ARGIND](https://www.gnu.org/software/gawk/manual/html_node/Auto_002dset.html) to determine which file you are currently
 operating on and its position in any possible input collection. A variable 'tool_input_id' is also set specifying the
 current inputs dataset name or collection id. Beware that ARGIND will increment 3 between inputs as one is consumed
-setting tool_input and another setting tool_input_id and the third to specify the input file. Something to note is that 
+setting tool_input, another setting tool_input_id, and the third to specify the input file. Something to note is that 
 while Galaxy provides a dataset name to tool wrappers, it [does not provide collection names](https://github.com/galaxyproject/galaxy/issues/11606).
 
 The following script demonstrates the information provided by the tool wrapper to gawk. The tool is provided with a
