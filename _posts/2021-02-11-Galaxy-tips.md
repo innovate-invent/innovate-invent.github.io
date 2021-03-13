@@ -259,7 +259,8 @@ an exclusive relationship between the datasets.
 ## Writing your own tool wrappers
 
 You may find yourself wanting to write a Galaxy tool wrapper for your favorite tool. Unfortunately the environment and
-values provided to the tool command template are not well documented. I have produced
+values provided to the tool [command template](https://docs.galaxyproject.org/en/latest/dev/schema.html#reserved-variables) 
+are not well documented. I have produced
 a [tool](https://github.com/brinkmanlab/galaxy-tools/blob/master/inspect/inspect.xml) that will display much of the
 execution environment available to a tool command template. The tool needs to be manually installed as it is far too
 dangerous of a tool to distribute via the toolshed. **DO NOT INSTALL THIS TOOL ON A PUBLIC SERVER**, it will output all
