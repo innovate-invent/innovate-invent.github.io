@@ -27,7 +27,7 @@ my mind is that Galaxy stores its pipelines as a graph data structure. This is i
 amounts of time and money building these pipelines. You want to ensure that that investment is secure against changes in
 the software over time. Storing as a data structure means that the pipeline can readily be queried and transformed by
 any software that can read that structure format (JSON/YAML). The other mentioned solutions store their pipeline
-descriptions as code. This means that you would have to either write a complex syntax parser to try to transform the
+descriptions as code. This means that you would have to either write a complex syntax parser to transform the
 pipeline to another solutions format, or manually reimplement the pipeline. Manually reimplementing the pipeline is
 always going to be plagued with mistakes and failure to capture subtle or implicit functionality.
 
@@ -44,9 +44,11 @@ pairs of datasets (list:pair) which is tremendously important when a tool wants 
 such as what is output from double ended DNA sequencing.
 <img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/collection_operations.png" alt="Galaxy GNU Awk wrapper" style="float: right; max-width: 25em"/>
 Collections can be extended even further to allow for collections of collections, which allows you to maintain subgroups
-of collections within a collection (list:list or list:list:list). It is important to know that collections are ordered,
-and operations are available to sort or modify that order. Most [Galaxy instances](https://usegalaxy.org/) provide these
-operations under the "Collection Operations"
+of collections within a collection (list:list or list:list:list). It is important to know that collections are 
+[immutable](https://en.wikipedia.org/wiki/Immutable_object), once created you can not modify their contents.
+They are also more like ordered mappings or dictionaries, they have a unique key that is assigned to each collection element. 
+Operations are available to sort, modify, and relabel collections, but they all generate a new copy of the collection 
+rather than modify them. Most [Galaxy instances](https://usegalaxy.org/) provide these operations under the "Collection Operations"
 section of its tool panel. It is beneficial to become familiar with all of them while setting out to create a workflow.
 
 The real magic is when you try to pass a collection of various types to a tool that is not expecting a collection, or
@@ -135,17 +137,18 @@ global.
 [Download](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/AWKScript_demo.ga) this demo workflow to test it
 yourself.
 
-The environment inputs allow you to generalise your scripts, specifying constants with the tool invocation, or allow
-attaching simple workflow parameter inputs. Environment variables are accessible
+Environment variables are accessible
 via [ENVIRON](https://www.gnu.org/software/gawk/manual/gawk.html#index-environment-variables_002c-in-ENVIRON-array).
+The environment inputs allow you to generalise your scripts, specifying constants with the tool invocation, or allow
+attaching simple workflow parameter inputs. 
+<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/module_connection.png" alt="Galaxy GNU Awk wrapper input module connection" style="float: left; max-width: 10em"/>
+If you click the ⬌ icon on an Environment Variable value input, it will allow you to provide the value as a tool input
+from a workflow Simple Parameter Input.
 
 The wrapper inputs provide the ability to specify if they accept single inputs or if they accept collections of inputs.
 This is very useful when trying to get a specific collection mapping behavior. If you attach an optional workflow input
 to the input of this tool, the tool will run regardless of the input. If there is no input provided the BEGIN rule will
 be executed, but the BEGINFILE and subsequent rules will not.
-<img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/module_connection.png" alt="Galaxy GNU Awk wrapper input module connection" style="float: left; max-width: 10em"/>
-If you click the ⬌ icon on an Environment Variable value input, it will allow you to provide the value as a tool input
-from a workflow Simple Parameter Input.
 
 This tool allows you to embed scripting logic within a workflow that is aware of the various properties of the workflow
 data. That data can be leveraged along with collection operation tools to provide a whole new level of functionality of
@@ -279,6 +282,10 @@ are available.
 
 Hopefully by this point you have everything you need to start creating robust, well-formed pipelines. There are a
 million more tiny little features scattered about Galaxy that can be quite useful, and I encourage you to explore.
+
+It is important to point out that many of the techniques mentioned here will fail if used in a sub-workflow. This
+is due to a bug in earlier releases of Galaxy. I have worked with the Galaxy developers to resolve these issues in version 20.09.
+The current HEAD of the 21.01 branch reintroduced these [issues](https://github.com/galaxyproject/galaxy/issues/11612), and a fix is pending.
 
 Check out the [Awesome Galaxy](https://github.com/galaxyproject/awesome-galaxy/) repository for a community maintained list of awesome Galaxy resources.
 
