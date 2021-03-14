@@ -1,8 +1,8 @@
 ---
-title: User Specific System Config
-excerpt: How to override a system config file with user specific settings
-published: false
-tags: /etc/hosts /etc/passwd unshare userland userspace mountspace
+title: User Specific System Config  
+excerpt: How to override a system config file with user specific settings  
+published: false  
+tags: /etc/hosts /etc/passwd unshare userland userspace mountspace  
 ---
 
 http://man7.org/linux/man-pages/man1/unshare.1.html

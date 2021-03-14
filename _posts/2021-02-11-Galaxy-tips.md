@@ -5,6 +5,8 @@ tags: galaxy project pipeline workflow tips tricks control flow
 toc: true  
 toc_sticky: true  
 published: true
+header:
+    teaser: /assets/posts/2021-02-23-Galaxy-workflow-flow-control/galaxy.png
 ---
 
 My years of experience working with the Galaxy analysis platform has yielded a useful bag of tricks and tools that I
