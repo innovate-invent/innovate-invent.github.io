@@ -132,13 +132,11 @@ tool_input	ARGIND	tool_input_id
 ```
 
 As you can see, dataset1/2/3 are the collection element identifiers for the collection provided to input 0.
-single_dataset is the name of the dataset provided to input 1. env1/2 were provided to the script via the ENVIRON
+single_dataset is the name of the dataset provided to input 1. env1/2 were provided to the script via the [ENVIRON](https://www.gnu.org/software/gawk/manual/gawk.html#index-environment-variables_002c-in-ENVIRON-array)
 global.
 [Download](/assets/posts/2021-02-23-Galaxy-workflow-flow-control/AWKScript_demo.ga) this demo workflow to test it
 yourself.
 
-Environment variables are accessible
-via [ENVIRON](https://www.gnu.org/software/gawk/manual/gawk.html#index-environment-variables_002c-in-ENVIRON-array).
 The environment inputs allow you to generalise your scripts, specifying constants with the tool invocation, or allow
 attaching simple workflow parameter inputs. 
 <img src="/assets/posts/2021-02-23-Galaxy-workflow-flow-control/module_connection.png" alt="Galaxy GNU Awk wrapper input module connection" style="float: left; max-width: 10em"/>
