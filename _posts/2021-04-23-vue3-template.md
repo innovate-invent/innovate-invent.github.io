@@ -25,9 +25,7 @@ Here is a template created to include these features:
 <script lang="ts">
 import { Options, Prop, Watch, Vue } from 'vue-property-decorator';
 
-@Options({
-components: {},
-})
+@Options({ components: {} })
 export default class ${COMPONENT_NAME} extends Vue {
 \$refs!: {};
 
