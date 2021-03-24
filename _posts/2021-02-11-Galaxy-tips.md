@@ -284,8 +284,7 @@ Hopefully by this point you have everything you need to start creating robust, w
 million more tiny little features scattered about Galaxy that can be quite useful, and I encourage you to explore.
 
 It is important to point out that many of the techniques mentioned here will fail if used in a sub-workflow. This
-is due to a bug in earlier releases of Galaxy. I have worked with the Galaxy developers to resolve these issues in version 20.09.
-The current HEAD of the 21.01 branch reintroduced these [issues](https://github.com/galaxyproject/galaxy/issues/11612), and a fix is pending.
+is due to a bug in earlier releases of Galaxy. I have worked with the Galaxy developers to resolve these issues in version 20.09 and later versions.
 
 Check out the [Awesome Galaxy](https://github.com/galaxyproject/awesome-galaxy/) repository for a community maintained list of awesome Galaxy resources.
 
