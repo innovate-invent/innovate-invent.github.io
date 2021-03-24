@@ -38,8 +38,8 @@ is [usegalaxy.org](https://usegalaxy.org/)
 
 ## Intro to collections
 
-One of the most potent features of Galaxies workflow functionality is its concept of a dataset collection (list). The
-concept of a list of datasets is not particularly revolutionary, but Galaxies behavior when working with them is. The
+One of the most potent features of Galaxy's workflow functionality is its concept of a dataset collection (list). The
+concept of a list of datasets is not particularly revolutionary, but Galaxy's behavior when working with them is. The
 mundane use is for tools to require a collection of datasets to operate on. This requirement is specified in the tools
 wrapper and Galaxy ensures that the tool gets what it wants. Galaxy extends this to allow describing collections of
 pairs of datasets (list:pair) which is tremendously important when a tool wants to operate on pairs of related datasets
@@ -272,7 +272,7 @@ dangerous of a tool to distribute via the toolshed. **DO NOT INSTALL THIS TOOL O
 the critical secrets of the Galaxy deployment and system. This tool also does everything that a tool wrapper should
 never do and will likely need to be tweaked depending on the version of Galaxy it is installed to before it will run.
 
-Be sure to check out Galaxies [documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html)
+Be sure to check out Galaxy's [documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html)
 for the tool XML file as your starting place when developing a wrapper. It isn't well advertised in the Galaxy
 documentation, but a tool wrapper command is compiled using
 the [Cheetah Template Engine](https://pythonhosted.org/Cheetah/users_guide/language.html) and all the engines features
