@@ -1,8 +1,12 @@
 ---
-title: "Vue2 Typescript Jetbrains Template"
-excerpt: "A handy file template for Vue single file components"
+title: "Vue3 Typescript Jetbrains Template"
+excerpt: "A handy file template for Vue3 single file components"
 tags: vue typescript single file component class vue-property-decorator decorator template webstorm jetbrains
 ---
+
+This is an update of [my original post](/vue-template/) but for Vue 3. 
+The only real change is the Component decorator has been changed out for Options.
+See the [Vue 3 support](https://github.com/kaorun343/vue-property-decorator/issues/294) issue for details about the change.
 
 Over the years I have tried a variety of IDEs and I have found that [Jetbrains](https://www.jetbrains.com/) produces a suite of 
 software that fits my needs beautifully.
@@ -19,9 +23,11 @@ Here is a template created to include these features:
 </template>
 
 <script lang="ts">
-import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
+import { Options, Prop, Watch, Vue } from 'vue-property-decorator';
 
-@Component({ components: {} })
+@Options({
+components: {},
+})
 export default class ${COMPONENT_NAME} extends Vue {
 \$refs!: {};
 
