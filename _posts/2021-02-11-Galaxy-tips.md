@@ -16,7 +16,7 @@ you have anything you would like to add or is unclear. I hope you find something
 ## Intro to Galaxy
 
 [The Galaxy Project](https://galaxyproject.org/) aims to bring together the various disparate data science resources and
-provide a means for public compute resources to host them. Given the sheer variety of infrastructures designs and data
+provide a means for public compute resources to host them. Given the sheer variety of infrastructure designs and data
 storage mechanisms, this was no small task. At its heart it provides an abstraction layer for various data processing
 and analysis tools. It uses this abstraction to allow chaining these tools into data pipelines (it refers to them as "
 workflows"). There are a number of other solutions available to do this task such
