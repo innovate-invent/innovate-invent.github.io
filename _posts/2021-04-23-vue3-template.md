@@ -4,7 +4,7 @@ excerpt: "A handy file template for Vue3 single file components"
 tags: vue typescript single file component class vue-property-decorator decorator template webstorm jetbrains
 ---
 
-This is an update of [my original post](/vue-template/) but for Vue 3. 
+This is an update of [my original post](/vue-template/) for Vue 3. 
 The only real change is the Component decorator has been changed out for Options.
 See the [Vue 3 support](https://github.com/kaorun343/vue-property-decorator/issues/294) issue for details about the change.
 
@@ -13,7 +13,7 @@ software that fits my needs beautifully.
 
 Vue is a web framework I have recently been working with for various web applications. It is highly modular and supports
 TypeScript. [Jetbrains Webstorm](https://www.jetbrains.com/webstorm/) does not include a template for creating 
-[Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html) using [class components](https://vuejs.org/v2/guide/typescript.html#Class-Style-Vue-Components) and TypeScript.
+[Vue Single File Components](https://v3.vuejs.org/guide/single-file-component.html) using [class components](https://class-component.vuejs.org/) and TypeScript.
 
 Here is a template created to include these features:  
 
@@ -41,7 +41,7 @@ export default class ${COMPONENT_NAME} extends Vue {
 
 It includes the [Prop](https://github.com/kaorun343/vue-property-decorator#Prop) and [Watch](https://github.com/kaorun343/vue-property-decorator#Watch) decorators from the [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) package.
 
-`$refs!: {}` is included to declare the type of any [refs](https://vuejs.org/v2/api/#ref) that appear in the template.
+`$refs!: {}` is included to declare the type of any [refs](https://v3.vuejs.org/api/instance-properties.html#refs) that appear in the template.
 
 If you prefer scss or any preprocessed css then you may be interested in adding to the end:
 ```html
