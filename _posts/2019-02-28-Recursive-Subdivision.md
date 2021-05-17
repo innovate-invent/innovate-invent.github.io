@@ -122,7 +122,7 @@ A visual demonstration of the algorithm in action:
     Your browser is unable to support the visual demonstration of this algorithm
 </canvas>1
 </div>
-<script type="javascript">
+<script type="text/javascript">
 window.addEventListener('load', () => {
     const canvas = document.getElementById('subdivision');
     if (canvas.getContext){
