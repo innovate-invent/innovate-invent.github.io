@@ -34,7 +34,20 @@ Coping with hearing impairment comes with numerous challenges and depending on t
 lifelong troubles functioning in society. I have identified some readily available technologies that when combined will
 bridge the education and communication gap between these peoples and their communities.
 
+Software
+---
 
+[Javascript DNS client](https://github.com/innovate-invent/dns)
+----
+Dependency free, browser compatible, NodeJS dns library replacement. Implements RFC8484 and RFC1035. Supports most DNS
+over HTTPS servers. Why would you want to make DNS requests from a browser? DNS has numerous functions other than
+mapping domain names to IP addresses. SRV and TXT records offer the ability to do service discovery and distribute
+information such as public keys.
+
+<!--
+[SocProx](https://github.com/innovate-invent/socprox)
+----
+-->
 
 Projects backburnered due to time, resource, or demand constraints
 ---
