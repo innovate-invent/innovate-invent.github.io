@@ -117,42 +117,42 @@ double d(unsigned int n) {
 
 A visual demonstration of the algorithm in action:
 
-<div>
-    0
-    <canvas id="subdivision" style="height: 1em; width: 100%; display: inline-block;">
+<div style="display: flex; flex-direction: row;">
+0<canvas id="subdivision" style="height: 1.5em; width: 100%;">
     Your browser is unable to support the visual demonstration of this algorithm
-    </canvas>
-    1
+</canvas>1
 </div>
 <script type="javascript">
-const canvas = document.getElementById('subdivision');
-if (canvas.getContext){
-    const ctx = canvas.getContext('2d');
-    ctx.lineWidth = 1;
-    ctx.fillStyle = 'black';
-    let n = 0;
-    setInterval(function() {
-        if (n > canvas.width) {
-            n = 0;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        } else {
-            let d;
-            if (n < 2) d = n;
-            else {
-                let intlog = 0;
-                for (let tmp = n ^ 1; tmp >>>= 1; ++intlog);
-                const expfloor = 1 << intlog;
-                const logrem = (expfloor - 1) & n;
-                d = (logrem === 0 ? logrem - 0.5 : expfloor - 1) / expfloor;
+window.addEventListener('load', () => {
+    const canvas = document.getElementById('subdivision');
+    if (canvas.getContext){
+        const ctx = canvas.getContext('2d');
+        ctx.lineWidth = 1;
+        ctx.fillStyle = 'black';
+        let n = 0;
+        setInterval(function() {
+            if (n > canvas.width) {
+                n = 0;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            } else {
+                let d;
+                if (n < 2) d = n;
+                else {
+                    let intlog = 0;
+                    for (let tmp = n ^ 1; tmp >>>= 1; ++intlog);
+                    const expfloor = 1 << intlog;
+                    const logrem = (expfloor - 1) & n;
+                    d = (logrem === 0 ? logrem - 0.5 : expfloor - 1) / expfloor;
+                }
+                d = Math.floor( d * canvas.width );
+                ctx.beginPath();
+                ctx.moveTo(d, 0);
+                ctx.lineTo(d, canvas.height);
+                ctx.stroke();
+                ++n;
             }
-            d = Math.floor( d * canvas.width );
-            ctx.beginPath();
-            ctx.moveTo(d, 0);
-            ctx.lineTo(d, canvas.height);
-            ctx.stroke();
-            ++n;
-        }
-    }, 500);
+        }, 500);
+    }
 }
 </script>
 
