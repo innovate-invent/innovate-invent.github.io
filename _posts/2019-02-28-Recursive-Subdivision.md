@@ -153,7 +153,7 @@ window.addEventListener('load', () => {
             }
         }, 500);
     }
-}
+});
 </script>
 
 If you are having to calculate this A LOT then check out
