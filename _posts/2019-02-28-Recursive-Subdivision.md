@@ -5,15 +5,6 @@ tags: colors subdivide recursive distinct math equation
 header:
     teaser: /assets/posts/2019-02-28-Recursive-Subdivision/GoldenSpiralLogarithmic_color_in.png
 ---
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>
-MathJax = {
-  loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
-};
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
-</script>
 
 For an infinite discreet series n we want to map to a range [0, 1] such that the values within that range are as
 distant (distinct) as possible without recalculating the predecessors (`d(n)`).
@@ -118,42 +109,48 @@ double d(unsigned int n) {
 A visual demonstration of the algorithm in action:
 
 <div style="display: flex; flex-direction: row;">
-0<canvas id="subdivision" style="height: 1.5em; width: 100%;">
-    Your browser is unable to support the visual demonstration of this algorithm
+  0<canvas id="subdivision" style="height: 1.5em; width: calc(100% - 2ch);" height="1">
+  Your browser is unable to support the visual demonstration of this algorithm
 </canvas>1
 </div>
 <script type="text/javascript">
-window.addEventListener('load', () => {
-    const canvas = document.getElementById('subdivision');
-    if (canvas.getContext){
-        const ctx = canvas.getContext('2d');
-        ctx.lineWidth = 1;
-        ctx.fillStyle = 'black';
-        let n = 0;
-        setInterval(function() {
-            if (n > canvas.width) {
+    window.addEventListener('load', () => {
+        const canvas = document.getElementById('subdivision');
+        if (canvas.getContext){
+            const ctx = canvas.getContext('2d');
+            ctx.lineWidth = 1;
+            ctx.fillStyle = 'black';
+            let n;
+            function reset() {
                 n = 0;
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-            } else {
-                let d;
-                if (n < 2) d = n;
-                else {
-                    let intlog = 0;
-                    for (let tmp = n ^ 1; tmp >>>= 1; ++intlog);
-                    const expfloor = 1 << intlog;
-                    const logrem = (expfloor - 1) & n;
-                    d = (logrem === 0 ? logrem - 0.5 : expfloor - 1) / expfloor;
-                }
-                d = Math.floor( d * canvas.width );
-                ctx.beginPath();
-                ctx.moveTo(d, 0);
-                ctx.lineTo(d, canvas.height);
-                ctx.stroke();
-                ++n;
+                canvas.setAttribute('width', window.getComputedStyle(canvas, null).getPropertyValue('width'));
             }
-        }, 500);
-    }
-});
+            new ResizeObserver(reset).observe(canvas);
+            reset();
+            setInterval(function() {
+                if (n > canvas.width) {
+                    reset();
+                } else {
+                    let d;
+                    if (n < 2) d = n;
+                    else {
+                        let intlog = 0;
+                        for (let tmp = n ^ 1; tmp >>>= 1; ++intlog);
+                        expfloor = 1 << intlog;
+                        logrem = (expfloor - 1) & n;
+                        d = (logrem !== 0 ? logrem - 0.5 : (expfloor - 1)) / expfloor;
+                    }
+                    d = Math.floor( d * canvas.width );
+                    ctx.beginPath();
+                    ctx.moveTo(d, 0);
+                    ctx.lineTo(d, canvas.height);
+                    ctx.stroke();
+                    ++n;
+                }
+            }, 500);
+        }
+    });
 </script>
 
 If you are having to calculate this A LOT then check out
