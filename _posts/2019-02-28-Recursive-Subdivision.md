@@ -99,7 +99,7 @@ For example, in C++ this would be written:
 double d(unsigned int n) {
     if (n < 2) return n;
     unsigned int intlog = 0;
-    for (auto tmp = n ^ 1; tmp >>= 1; ++intlog);
+    for (auto tmp = n; tmp >>= 1; ++intlog);
     const auto expfloor = 1 << intlog;
     const auto logrem = (expfloor - 1) & n;
     return (double)(logrem ? logrem - 0.5 : expfloor - 1) / expfloor;
@@ -137,7 +137,7 @@ A visual demonstration of the algorithm in action:
                     if (n < 2) d = n;
                     else {
                         let intlog = 0;
-                        for (let tmp = n ^ 1; tmp >>>= 1; ++intlog);
+                        for (let tmp = n; tmp >>>= 1; ++intlog);
                         expfloor = 1 << intlog;
                         logrem = (expfloor - 1) & n;
                         d = (logrem !== 0 ? logrem - 0.5 : (expfloor - 1)) / expfloor;
