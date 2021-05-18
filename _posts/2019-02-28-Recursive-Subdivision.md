@@ -108,7 +108,7 @@ double d(unsigned int n) {
 
 A visual demonstration of the algorithm in action:
 
-<div style="display: flex; flex-direction: row;">
+<div style="<div style="display: flex; flex-direction: row;" title="Click to reset">
   0<canvas id="subdivision" style="height: 1.5em; width: calc(100% - 2ch);" height="1">
   Your browser is unable to support the visual demonstration of this algorithm
 </canvas>1
@@ -127,6 +127,7 @@ A visual demonstration of the algorithm in action:
                 canvas.setAttribute('width', window.getComputedStyle(canvas, null).getPropertyValue('width'));
             }
             new ResizeObserver(reset).observe(canvas);
+            canvas.addEventListener('click', reset);
             reset();
             setInterval(function() {
                 if (n > canvas.width) {
