@@ -188,3 +188,14 @@ This project is currently waiting for time to be freed up from other ongoing pro
 - Evaluate unanticipated requirements for data ingestion and sanitization
 - Preliminary data characterization and curation
 - Secure funding for a molecular gastronomist and professional chef (same person?)
+
+<!-- 
+https://academic.oup.com/database/article/doi/10.1093/database/baaa077/6006228
+https://cosylab.iiitd.edu.in/recipedb/
+https://github.com/cosylabiiit/recipe-knowledge-mining
+https://github.com/cosylabiiit/Recipedb-companion-data
+
+https://academic.oup.com/database/article/doi/10.1093/database/baz121/5611291
+
+
+-->
