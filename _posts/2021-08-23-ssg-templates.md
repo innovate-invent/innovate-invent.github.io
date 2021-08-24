@@ -118,7 +118,7 @@ decide to associate text with that item.
 ## The plead
 
 Please, please, PLEASE! design your SSG templates/themes to use markdown files any time there are objects with
-associated text. Those objects should manage their own navigation settings so that when the file is added or removed,
+associated text. Those objects should manage their own navigation settings, so that when the file is added or removed,
 that is the only change required.
 
 This allows me to use your templates rather than constantly having to start from scratch with every site.
