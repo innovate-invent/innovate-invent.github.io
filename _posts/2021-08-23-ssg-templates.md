@@ -1,7 +1,8 @@
 ---
-title: "A begging letter to SSG template developers"
-excerpt: "A plea to properly design SSG templates and their content"
-tags: ssg template theme hugo jekyll static site generator toc: true  
+title: A begging letter to SSG template developers
+excerpt: A plea to properly design SSG templates and their content
+tags: ssg template theme hugo jekyll static site generator
+toc: true  
 toc_sticky: true  
 published: true
 ---
