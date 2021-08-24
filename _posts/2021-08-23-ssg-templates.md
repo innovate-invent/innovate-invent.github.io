@@ -1,6 +1,5 @@
 ---
-title: A begging letter to SSG template developers
-excerpt: A plea to properly design SSG templates and their content
+title: A begging letter to SSG template developers excerpt: A plea to properly design SSG templates and their content
 tags: ssg template theme hugo jekyll static site generator
 toc: true  
 toc_sticky: true  
@@ -13,7 +12,7 @@ content correctly. They are requiring textual data to be stored in a YAML docume
 separate document or global site configuration. This complicates maintenance, isn't very Git friendly, and complicates
 training of less technical content editors.
 
-## Content
+## The Content
 
 Some templates encountered stored all posts in a single YAML file: `data/posts.yaml`
 
@@ -80,11 +79,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
 
-Notice that the date is stored in the file name and can be extracted by the SSG. A common front-matter field, the '
-slug', is also stored in the file name. This file naming scheme allows sorting by date, and deduplicating information
+Notice that the date is stored in the file name and can be extracted by the SSG. A common front-matter field, the 'slug', 
+is also stored in the file name. This file naming scheme allows sorting by date, and deduplicating information
 between the file name and front-matter.
 
-## Navigation
+## The Navigation Menu
 
 The issue found in many if not most themes/templates encountered is with how they manage the navigation configuration.
 There is no reason that the navigation bar configuration should be stored in a central location, that needs to be
