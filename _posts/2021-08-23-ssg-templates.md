@@ -7,7 +7,7 @@ toc_sticky: true
 published: true
 ---
 
-When ever I set up a website with a static site generator such as Hugo or Jekyll, the first thing I do is have a look at
+When ever I set up a website with a static site generator (SSG) such as Hugo or Jekyll, the first thing I do is have a look at
 what existing themes/templates are available. I am always disappointed to find that even paid templates do not handle
 content correctly. They are requiring textual data to be stored in a YAML document and the navigation is stored in a
 separate document or global site configuration. This complicates maintenance, isn't very Git friendly, and complicates
@@ -41,13 +41,14 @@ posts:
 Each of these posts should have been stored in their own markdown files with respective front-matter. Storing each unit
 of content or 'object' (be it a post, page, update, or content fragment of any type) in a separate file allows
 conventional file system tools to manage and manipulate the objects. Having the content in separate files also
-significantly reduces the possibility of a merge conflict when tracking with Git. The last and possibly most important
-point is that having each object in a separate markdown file makes it much easier for non-technical editors to interact
-directly with the content. As a YAML file, the editor is expected to understand and maintain the YAML syntax, which can
-get sticky especially when including free form text and all the reserved characters and indentation that come with it.
-With markdown, the files can be created with a user-friendly templating application (such as Hugo's archetype system)
-that handles the front-matter syntax for the user, and then they are free to enter whatever content into the document,
-worry free of YAML syntax.
+significantly reduces the possibility of a merge conflict when tracking with Git. 
+
+The last and possibly most important point is that having each object in a separate markdown file makes it much easier 
+for non-technical editors to interact directly with the content. As a YAML file, the editor is expected to understand 
+and maintain the YAML syntax, which can get sticky especially when including free form text and all the reserved 
+characters and indentation that come with it. With markdown, the files can be created with a user-friendly templating 
+application (such as Hugo's archetype system) that handles the front-matter syntax for the user, and then they are free 
+to enter whatever content into the document, worry free of YAML syntax.
 
 Here is the above example rewritten as markdown files:
 
@@ -86,11 +87,11 @@ between the file name and front-matter.
 
 ## The Navigation Menu
 
-The issue found in many if not most themes/templates encountered is with how they manage the navigation configuration.
+How the navigation configuration is managed is a common issue found in many if not most themes/templates encountered.
 There is no reason that the navigation bar configuration should be stored in a central location, that needs to be
 updated independent of the pages that the navigation represents. I should be able to fully remove a page from the site
-by simply deleting the markdown file. Everything related to that page should be kept with the page, not spread over the
-entire project structure.
+by simply deleting the markdown file. Everything related to that page should be kept with the markdown file, not spread 
+over the entire project structure.
 
 Here is an example front-matter for a page, with navigation annotations:
 
@@ -118,6 +119,10 @@ decide to associate text with that item.
 
 ## The plead
 
-Please, please, PLEASE! design your SSG templates/themes to use markdown files any time there are objects with
+Non-technical users understand (at least at a basic level) how to work with files, and at the end of the day I want to 
+be able to hand off a website to someone and have them able to manage the site content without requiring my involvement 
+for every change.
+
+Please, please, PLEASE! Design your SSG templates/themes to use markdown files any time there are objects with
 associated text. Those objects should manage their own navigation settings, so that when the file is added or removed,
-that is the only change required.
+that is the only change required. 
