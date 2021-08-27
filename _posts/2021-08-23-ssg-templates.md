@@ -85,6 +85,49 @@ Notice that the date is stored in the file name and can be extracted by the SSG.
 is also stored in the file name. This file naming scheme allows sorting by date, and deduplicating information
 between the file name and front-matter.
 
+Another example is a page with numerous sections having its content stored as YAML. This manifests by either storing it
+as a separate YAML document or loading up the front-matter of a document with large textual fields. The idea is that 
+storing all content as structured data makes it easy to work with in the template code, but this is wrong. Your SSG 
+provides a way to store structured data as files and folders, and provides template mechanisms to easily work with it.
+
+```yaml
+data/about.yaml
+---
+about:
+  enable : true
+  title : About Us
+  about_item :
+  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
+    title : We're Creative
+    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+
+  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
+    title : We're Professional
+    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+
+  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
+    title : We're Genius
+    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+```
+
+This data should have been stored as individual markdown files with a structure similar to:
+
+```
+content
+└── about
+    ├── index.md  # defines overall page with page front-matter
+    ├── item-creative.md  # section markdown
+    ├── item-professional.md  
+    └── item-genius.md  
+```
+
+Yes, having a separate file for a small amount of content can feel like it is overdone, but if the template dynamically 
+scans for the files, then sections can be added and removed without needing to edit the template. Each fragment could be 
+potentially rendered differently based on its front-matter. If requirements ever change and the content or front-matter 
+needs to be greatly expanded for each element, then everything is already in place to make that happen. The overall goal 
+is to keep textual content in a format intended to store textual data.
+See [the issue discussed further](https://github.com/gohugoio/hugo/issues/4292) for the Hugo SSG.
+
 ## The Navigation Menu
 
 How the navigation configuration is managed is a common issue found in many if not most themes/templates encountered.
