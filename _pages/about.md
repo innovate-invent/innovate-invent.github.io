@@ -12,8 +12,7 @@ projects. My greatest struggle in life is the finite amount of time I have to in
 My career started with 12 years of experience working in the construction electrical trade, managing projects and
 training/supervising apprentices. I have also held various positions across all levels of government. I recently
 completed a degree in Molecular Biology, Biochemistry, and Computer Sciences with a business certificate in Innovation
-and Entrepreneurship. Currently, I am working as a bioinformatics software developer and systems engineer for a laboratory
-specializing in microbial pathogenomics and microbiome studies. My ultimate goal is to work in synthetic biology
+and Entrepreneurship. My ultimate goal is to work in synthetic biology
 research. I am fascinated by the idea of replacing industrial chemical processes and pharmaceutical manufacturing with
 engineered agriculture.
 
