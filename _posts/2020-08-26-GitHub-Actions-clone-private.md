@@ -1,7 +1,7 @@
 ---
 title: Preconfigure git with credentials
 excerpt: Configure git to use credentails when cloning a private repository
-tags: git github actions credentials private repository clone terraform
+tags: [git, github, actions, credentials, private repository, clone, terraform]
 ---
 
 You may encounter a program that is indirectly trying to use git to access a private repository. If this program has no means to configure credentials you might think you are out of luck.

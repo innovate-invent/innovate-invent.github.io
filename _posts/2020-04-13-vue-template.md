@@ -1,7 +1,7 @@
 ---
 title: "Vue2 Typescript Jetbrains Template"
 excerpt: "A handy file template for Vue single file components"
-tags: vue typescript single file component class vue-property-decorator decorator template webstorm jetbrains
+tags: [vue, typescript, single file component class, vue-property-decorator, decorator, template, webstorm, jetbrains]
 ---
 
 Over the years I have tried a variety of IDEs and I have found that [Jetbrains](https://www.jetbrains.com/) produces a suite of 

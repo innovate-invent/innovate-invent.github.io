@@ -1,7 +1,7 @@
 ---
 title: SPA Template
 excerpt: Vue SPA boilerplate with some extra features
-tags: spa git template vue vuex markdown github
+tags: [spa, git, template, vue, vuex, markdown, github]
 ---
 
 Recently I found myself copy pasting a significant amount of boilerplate code for a number of projects.

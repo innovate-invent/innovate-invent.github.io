@@ -1,7 +1,7 @@
 ---
 title: Communication
 excerpt: The only thing you really know is what you can put into words
-tags: communication writing collaboration
+tags: [communication, writing, collaboration]
 published: false
 ---
 

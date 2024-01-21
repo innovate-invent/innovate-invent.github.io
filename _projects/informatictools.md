@@ -1,7 +1,7 @@
 ---
 title: Informatic tools  
 author_profile: true  
-tags: data science pipeline workflow visualization informatics tools cloud serverless
+tags: [data science, pipeline, workflow, visualization, informatics tools, cloud, serverless]
 ---
 Professionally I am a data scientist, at least that is what they told me when I was hired. I find myself spending most
 of my time simply trying to get the data, software, and compute resource in the same place at the same time and run it

@@ -1,7 +1,7 @@
 ---
 title: Meal-prep Automation  
 author_profile: true  
-tags: automation food preparation processing cooking NLP AI meal nutrition
+tags: [automation, food preparation, processing, cooking, NLP, AI, meal, nutrition]
 ---
 My own struggles with eating well and cooking respectable meals combined with my need to break my teeth on process
 capture has resulted in this project. Cooking recipes are a relatively low bar in terms of capture and codification as

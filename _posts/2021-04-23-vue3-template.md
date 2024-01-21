@@ -1,7 +1,7 @@
 ---
 title: "Vue3 Typescript Jetbrains Template"
 excerpt: "A handy file template for Vue3 single file components"
-tags: vue typescript single file component class vue-property-decorator decorator template webstorm jetbrains
+tags: [vue, typescript, single file component class, vue-property-decorator, decorator, template, webstorm, jetbrains]
 ---
 
 This is an update of [my original post](/vue-template/) for Vue 3. 

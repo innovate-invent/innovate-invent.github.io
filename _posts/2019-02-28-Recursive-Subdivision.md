@@ -1,7 +1,7 @@
 ---
 title: Recursive Subdivision 
 excerpt: A simple, closed form, equation to recursively subdivide a domain 
-tags: colors subdivide recursive distinct math equation 
+tags: [colors, subdivide, recursive, distinct, math, equation]
 header:
     teaser: /assets/posts/2019-02-28-Recursive-Subdivision/GoldenSpiralLogarithmic_color_in.png
 ---

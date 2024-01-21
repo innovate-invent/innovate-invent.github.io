@@ -1,7 +1,8 @@
 ---
 title: Eyeth  
 author_profile: true  
-published: false tags: deaf hearing loss signlanguage education communication isolation community
+published: false 
+tags: [deaf, hearing loss, signlanguage, education, communication, isolation, community]
 ---
 
 # Sign language assist
