@@ -49,7 +49,8 @@ chain of space separated "format units" that describe how to deserialize the dat
 two numbers and a double-quoted string containing the printf token (`[c/b] "%s"`). Either number is optional, but if
 provided must include the `/` to distinguish which one you are providing. The first number is a count of the number of
 times to repeat the format unit. The second number is a count of the bytes to consume for each iteration. The string can
-only contain a single printf `%` token. You can think of it like for each count of bytes it passes it to the printf function
+only contain a single printf `%` token. You can think of it like for each count of bytes it passes it to the printf
+function
 with the bytes as a single argument.
 
 hexdumps behaviour for when it consumes bytes or not from the input stream is inconsistent and seems to depend on the
@@ -102,7 +103,8 @@ Copy the following into a file named `gpt_entries`
 
 You will see that I have included a shebang in the files allowing you to `chmod +x gpt_header gpt_entries` and execute
 the files directly rather than having to manage separate bash scripts. The shebangs also include a workaround that
-allows a single format string to span multiple lines for easier reading. Each script is passed a single argument
+allows a single format string to span multiple lines for easier reading. Each script is passed a single argument, the
+path to the disk image or block device.
 
 If for whatever reason your disk has a sector size other than 512 bytes you can set an env
 variable `BLOCK_SIZE=<your sector size>`. If whatever partitioned your disk did not put the GPT header at LBA 1, you can
@@ -208,7 +210,7 @@ printf "$fmt" 'Type GUID' 'Partition GUID' 'Start LBA' 'Last LBA' 'Attributes' '
 $src/gpt_entries $disk | grep -v '^00000000-0000-0000-0000-000000000000' | sed -e "s/^/'/g;s/\t/' '/g;s/$/'/g" | tr -d '.' | xargs -l printf "$fmt"
 ```
 
-Output 
+Output
 
 ```shell
 $ ./dumpgpt.sh disk.img 
