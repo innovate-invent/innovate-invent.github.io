@@ -2,7 +2,7 @@
 <h4 class="page__comments-title">{{ comments_label }}</h4>
 <form :action="'https://bsky.app/intent/compose?text=' + encodeURIComponent(text)" x-data="{text: ''}">
     <textarea minlength="1" maxlength="299" required spellcheck="true" placeholder="Post a comment to Bluesky" target="_blank" x-model="text"></textarea>
-    <submit>Post</submit>
+    <input class="btn btn--bluesky page__comment_submit" type="submit">Post</input>
 </form>
 <section id="bluesky-comments" x-data="{thread: {}}" x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread">
     <template x-for="reply in thread.replies" x-if="reply.post.record.text">
