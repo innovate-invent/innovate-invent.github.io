@@ -1,10 +1,14 @@
 {% if page.at_url %}
 <h4 class="page__comments-title">{{ comments_label }}</h4>
+<form :action="'https://bsky.app/intent/compose?text=' + encodeURIComponent(text)" x-data="{text: ''}">
+    <textarea minlength="1" maxlength="299" required spellcheck="true" placeholder="Post a comment to Bluesky" target="_blank" x-model="text"></textarea>
+    <submit>Post</submit>
+</form>
 <section id="bluesky-comments" x-data="{thread: {}}" x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread">
-    <template x-for="reply in thread.replies">
-    <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment" x-if="reply.post.record.text">
+    <template x-for="reply in thread.replies" x-if="reply.post.record.text">
+    <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
         <div class="comment__avatar-wrapper">
-            <img class="comment__avatar" :src="reply.post.author.avatar" :alt="reply.post.author.displayName">
+            <img class="comment__avatar" loading="lazy" :src="reply.post.author.avatar" :alt="reply.post.author.displayName">
         </div>
         <div class="comment__content-wrapper">
             <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
