@@ -12,7 +12,7 @@
         </div>
         <div class="comment__content-wrapper">
             <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <span itemprop="name"><a rel="external nofollow" itemprop="url" :href="'https://' + reply.post.author.handle" x-text="reply.post.author.displayName"></a></span>
+                <span itemprop="name"><a rel="external nofollow" itemprop="url" :href="'https://' + reply.post.author.handle" x-text="reply.post.author.displayName || reply.post.author.handle"></a></span>
             </h3>
             <p class="comment__date">
                 <a :href="reply.post.uri" itemprop="url">
