@@ -67,7 +67,7 @@ author:
   bio              : "I am an amazing person."
   location         : "Canada"
   email            : "nolan@i2labs.ca"
-  #uri              : "innovate-invent.com"
+  #uri              : ""
   home             : # null (default), "absolute or relative url to link to author home"
   #bitbucket        :
   #codepen          :
@@ -92,6 +92,7 @@ author:
   #weibo            :
   #xing             :
   #youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  bluesky           : innovate-invent.bsky.social
 
 
 # Reading Files
