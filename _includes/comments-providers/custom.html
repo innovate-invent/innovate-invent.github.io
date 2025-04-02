@@ -1,6 +1,6 @@
 {% if page.at_url %}
 <h4 class="page__comments-title">{{ comments_label }}</h4>
-<section id="bluesky-comments" x-data="{thread: {}}" x-init="thread = await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()">
+<section id="bluesky-comments" x-data="{thread: {}}" x-init="thread = await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json().thread">
     <template x-for="reply in thread.replies">
     <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment" x-if="reply.post.record.text">
         <div class="comment__avatar-wrapper">
