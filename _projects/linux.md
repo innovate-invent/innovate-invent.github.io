@@ -53,7 +53,7 @@ tech burden of maintenance.
 **The following will develop and be refined as the project progresses but is currently just a brain dump of ideas and
 resource links.**
 
-# Development breakdown / Stream programme
+## Development breakdown / Stream programme
 
 1. project goals
     1. immutable
@@ -95,7 +95,7 @@ resource links.**
 17. build system boiler on GH actions
 18.
 
-# Prior work
+## Prior work
 
 The distro will ship as a [Unified Kernel Image](https://wiki.archlinux.org/title/Unified_kernel_image). At a distance
 this may look like a modernised [TinyCore Linux](http://tinycorelinux.net/)
@@ -108,7 +108,7 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
 
 ---
 
-# Reference
+## Reference
 
 [Linux Kernel 2.4 Internals](https://tldp.org/LDP/lki/index.html)   
 [https://makelinux.github.io/kernel/map/](https://makelinux.github.io/kernel/map/)   
