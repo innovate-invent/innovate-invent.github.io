@@ -1,5 +1,5 @@
 ---
-permalink: /projects/  
+permalink: /projects/
 title: Projects
 ---
 
@@ -48,6 +48,15 @@ information such as public keys.
 [SocProx](https://github.com/innovate-invent/socprox)
 ----
 -->
+
+[Custom Linux Distro]() (To be named)
+----
+I have been exclusively using Linux for well over 15 years now, bouncing from various popular distros like Ubuntu, Arch,
+and Mint. This experience has come to a critical mass in my understanding of the Linux operating system and its
+ecosystem. This project is a vehicle to deep dive into the various components, discovering and closing any gaps I may
+have in my knowledge on the subject. Through the years I have built up a wishlist of features to help simplify managing
+and maintaining my Linux deployments, and intend to realise this list in a novel approach.
+
 
 Projects backburnered due to time, resource, or demand constraints
 ---
