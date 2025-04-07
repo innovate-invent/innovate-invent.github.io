@@ -49,7 +49,7 @@ information such as public keys.
 ----
 -->
 
-[Custom Linux Distro]() (To be named)
+[Custom Linux Distro](linux/) (To be named)
 ----
 I have been exclusively using Linux for well over 15 years now, bouncing from various popular distros like Ubuntu, Arch,
 and Mint. This experience has come to a critical mass in my understanding of the Linux operating system and its
