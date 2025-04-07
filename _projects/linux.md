@@ -1,5 +1,5 @@
 ---
-title: Linux
+title: Custom Linux Distro
 author_profile: true
 ---
 
