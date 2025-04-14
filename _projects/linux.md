@@ -40,10 +40,11 @@ tech burden of maintenance.
 # System Requirements
 
 * UEFI compliant firmware
-* GPT or MD-RAID formatted disk
-    * 4GB ESP partition
+* ACPI system interface
+* GPT formatted disk
+    * 4GB ESP partition ( or the option to reallocate space for a second 4GB ESP formatted partition)
 * 16GB of RAM
-* AMD, Intel, and possibly ARM CPU
+* AMD, Intel, and possibly ARM CPU 64bit
 * Modern GPU (integrated or discreet) from Intel, AMD, or NVIDIA
 
 ---
