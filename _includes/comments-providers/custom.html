@@ -6,8 +6,7 @@
 </form>
 <section id="bluesky-comments" x-data="{thread: {}, blocked: []}"
          x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread; blocked = await (await fetch('/assets/blocked_commenters.json')).json()">
-    <template x-for="reply in thread.replies"
-              x-if="reply.post.record.text && !blocked.includes(reply.post.author.did)">
+    <template x-for="reply in thread.replies.filter(reply=>reply.post.record.text && !blocked.includes(reply.post.author.did))">
     <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
         <div class="comment__avatar-wrapper">
             <img class="comment__avatar" loading="lazy" :src="reply.post.author.avatar" :alt="reply.post.author.displayName">
