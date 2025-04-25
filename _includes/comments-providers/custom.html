@@ -5,7 +5,7 @@
     <input class="btn btn--bluesky page__comment_submit" type="submit" value="Post">
 </form>
 <section id="bluesky-comments" x-data="{thread: {}, blocked: []}"
-         x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread; blocked = await (await fetch('/blocked_commenters.json')).json()">
+         x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread; blocked = await (await fetch('/assets/blocked_commenters.json')).json()">
     <template x-for="reply in thread.replies"
               x-if="reply.post.record.text && !blocked.includes(reply.post.author.did)">
     <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
