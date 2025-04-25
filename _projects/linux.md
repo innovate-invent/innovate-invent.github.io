@@ -122,6 +122,7 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
     * [https://unix.stackexchange.com/questions/77485/can-initramfs-be-paged-out-to-swap-disk](https://unix.stackexchange.com/questions/77485/can-initramfs-be-paged-out-to-swap-disk)
 * systemd
     * [https://systemd.io/](https://systemd.io/)
+    * https://github.com/systemd/systemd
     * [https://www.freedesktop.org/software/systemd/man/latest/index.html](https://www.freedesktop.org/software/systemd/man/latest/index.html)
     * systemd-init
         * [https://www.freedesktop.org/software/systemd/man/latest/init.html\#](https://www.freedesktop.org/software/systemd/man/latest/init.html#)
@@ -213,8 +214,12 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
 * swapfile by default /var/swapfile
 * network
     * nftables only?
+    * [netplan?](https://netplan.io/)
+    * https://help.ubuntu.com/community/NetworkManager
+    * https://www.freedesktop.org/software/systemd/man/latest/systemd-networkd.html#
     * [https://en.wikipedia.org/wiki/Netfilter](https://en.wikipedia.org/wiki/Netfilter)
     * https://www.slideshare.net/slideshow/the-linux-networking-architecture/45348971
+    * https://manpages.debian.org/unstable/networkd-dispatcher/networkd-dispatcher.8.en.html
 * good error reporting
     * [https://www.kernel.org/doc/Documentation/kdump/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
     * journald reports
@@ -371,8 +376,9 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
     * block standard DNS ports to prevent leaks
     * mDNS
     * dns in a container should route through host dns config? (mdns config)
+      * resolved has DBUS and socket support
     * [https://linux.die.net/man/8/nscd](https://linux.die.net/man/8/nscd)
-    *
+    * https://github.com/systemd/systemd/pull/31537
 * firmware
     * compress better than half a gig?
     * [https://github.com/timotheuslin/EFI-BIOS-Resources](https://github.com/timotheuslin/EFI-BIOS-Resources)
@@ -399,7 +405,9 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
     * [https://serverfault.com/questions/892134/why-is-there-both-character-device-and-block-device-for-nvme](https://serverfault.com/questions/892134/why-is-there-both-character-device-and-block-device-for-nvme)
 * sysfs only?
     * [https://www.kernel.org/doc/html/latest/admin-guide/abi.html](https://www.kernel.org/doc/html/latest/admin-guide/abi.html)
-    *
+* fonts?
+
+standalone server build with no gui? automatically bootstraps containers from a config?
 
 [https://github.com/docker/roadmap/issues/593](https://github.com/docker/roadmap/issues/593)
 
@@ -443,6 +451,7 @@ flatpak override \--user \--device=all com.obsproject.Studio
 [https://docs.docker.com/build/building/base-images/\#create-a-base-image](https://docs.docker.com/build/building/base-images/#create-a-base-image)
 
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
+
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
 
