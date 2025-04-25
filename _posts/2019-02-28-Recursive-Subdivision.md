@@ -11,8 +11,7 @@ There are sometimes situations where you need to select from a continuous range 
 different or far apart as possible from other selected values. An example of this is when dynamically picking colors 
 for a data visualisation and you need the colors to help with making the markers visually distinct. Generally your 
 data only has a few different categories and you can manually select colors from a palette. When the number of 
-categories is dynamic or numerous it is more pragmatic to automatically select distinct colors. The following is an O
-(1) time algorithm that serves this task.
+categories is dynamic or numerous it is more pragmatic to automatically select distinct colors.
 
 For an infinite discreet series n we want to map to a range [0, 1] such that the values within that range are as
 distant (distinct) as possible without recalculating the predecessors (`d(n)`).
