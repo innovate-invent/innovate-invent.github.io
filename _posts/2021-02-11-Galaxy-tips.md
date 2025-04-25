@@ -7,6 +7,7 @@ toc_sticky: true
 published: true
 header:
     teaser: /assets/posts/2021-02-23-Galaxy-workflow-flow-control/galaxy_project_logo.png
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnnhnj5s3s2w
 ---
 
 My years of experience working with the Galaxy analysis platform has yielded a useful bag of tricks and tools that I

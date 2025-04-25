@@ -3,6 +3,7 @@ title: Yellowstone National Park Fill Times
 excerpt: Avoid the rat race when visiting Yellowstone National Park
 published: true
 tags: [yellowstone, national park, fill times, campground, lodges, plot, data]
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnngynnht226
 ---
 
 Yellowstone National Park was the worlds first national park. It spans three states and is home to amazing geographic features, wildlife, Yellowstone Lake, and of course the geysers. It is a popular destination for tourists from around the world and accommodation is competitive. If you haven't booked a year in advance you will be surprised by the unusually high hotel pricing when you arrive. 

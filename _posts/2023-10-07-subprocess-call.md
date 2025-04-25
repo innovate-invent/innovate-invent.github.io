@@ -2,7 +2,8 @@
 title: Subprocess calls and why you should never do them
 excerpt: Subprocess calls are non-trivial, especially when calling arbitrary executables
 published: false  
-tags: 
+tags:
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/
 ---
 
 - process quotas/isolation

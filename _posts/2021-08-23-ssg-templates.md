@@ -5,6 +5,7 @@ tags: [ssg, template, theme, hugo, jekyll, static site generator]
 toc: true  
 toc_sticky: true  
 published: true
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnnhudgxic2w
 ---
 
 When ever I set up a website with a static site generator (SSG) such as Hugo or Jekyll, the first thing I do is have a look at

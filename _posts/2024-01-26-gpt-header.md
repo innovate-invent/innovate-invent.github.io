@@ -3,6 +3,7 @@ title: Decapitating GPT
 excerpt: Using hexdump to parse GPT headers
 published: true
 tags: [ GPT, partition table, hexdump, bash, linux, disk, disk image, deserialize ]
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnni3cbyts2w
 ---
 
 I found a need to parse GPT headers directly from a potentially corrupt or truncated disk

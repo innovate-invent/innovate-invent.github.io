@@ -3,6 +3,7 @@ title: Workflows, Pipelines, and Dataflows. OH MY!
 excerpt: A tumble down the cliff of academic software and standards
 published: false
 tags: [workflow, pipeline, dataflow, CWL, galaxy, job, runner]
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/
 ---
 
 Like all good speeches, I would like to begin by quoting a definition:
