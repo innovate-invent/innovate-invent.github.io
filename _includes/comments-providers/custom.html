@@ -4,8 +4,10 @@
     <textarea minlength="1" maxlength="299" required spellcheck="true" placeholder="Post a comment to Bluesky" x-model="text"></textarea>
     <input class="btn btn--bluesky page__comment_submit" type="submit" value="Post">
 </form>
-<section id="bluesky-comments" x-data="{thread: {}}" x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread">
-    <template x-for="reply in thread.replies" x-if="reply.post.record.text">
+<section id="bluesky-comments" x-data="{thread: {}, blocked: []}"
+         x-init="thread = (await (await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri={{page.at_url}}')).json()).thread; blocked = await (await fetch('/blocked_commenters.json')).json()">
+    <template x-for="reply in thread.replies"
+              x-if="reply.post.record.text && !blocked.includes(reply.post.author.did)">
     <article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
         <div class="comment__avatar-wrapper">
             <img class="comment__avatar" loading="lazy" :src="reply.post.author.avatar" :alt="reply.post.author.displayName">
