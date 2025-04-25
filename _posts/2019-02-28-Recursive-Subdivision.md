@@ -4,7 +4,7 @@ excerpt: A simple, closed form, equation to recursively subdivide a domain
 tags: [colors, subdivide, recursive, distinct, math, equation]
 header:
     teaser: /assets/posts/2019-02-28-Recursive-Subdivision/GoldenSpiralLogarithmic_color_in.png
-at_code: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnng3t33ys2t
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnng3t33ys2t
 ---
 
 There are sometimes situations where you need to select from a continuous range of values such that they are as 
