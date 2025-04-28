@@ -1,6 +1,7 @@
 ---
 title: Custom Linux Distro
 author_profile: true
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3lnueylfga22w
 ---
 
 I have been exclusively using Linux for well over 15 years now, bouncing from various popular distros like Ubuntu, Arch,
