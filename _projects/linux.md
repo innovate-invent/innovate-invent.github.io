@@ -105,7 +105,8 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
 
 [https://en.wikipedia.org/wiki/List\_of\_Linux\_distributions\_that\_run\_from\_RAM](https://en.wikipedia.org/wiki/List_of_Linux_distributions_that_run_from_RAM)   
 [https://www.linuxboot.org/](https://www.linuxboot.org/)
-
+https://en.wikipedia.org/wiki/GoboLinux
+https://www.linuxfromscratch.org/lfs/view/stable/index.html
 
 
 ---
@@ -347,7 +348,8 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
     * linker
         * [https://www.man7.org/linux/man-pages/man8/ld.so.8.html](https://www.man7.org/linux/man-pages/man8/ld.so.8.html)
         * [https://linux.die.net/man/1/chrpath](https://linux.die.net/man/1/chrpath)
-        *
+    * dedup
+      * https://github.com/BLAKE3-team/BLAKE3
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
@@ -454,4 +456,7 @@ flatpak override \--user \--device=all com.obsproject.Studio
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
+
+
+
 
