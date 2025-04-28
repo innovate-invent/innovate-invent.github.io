@@ -12,10 +12,10 @@ and maintaining my Linux deployments, and intend to realise this list in a novel
 
 While I am confident in my ability to execute this project, I am still learning some of the aspects of the Linux
 environment. There are some areas where I don't know what I don't know. I plan to stream the development of this distro
-on [Twitch](https://www.twitch.tv/i2labs) and [Youtube](https://www.youtube.com/@i2labs) so that I can hopefully recruit
-consultation from the community on things I may have missed and for feedback on the decisions I am making in real time.
-The stream will also serve as an educational resource where the various subsystems of Linux are explained and
-demonstrated.
+on [Twitch](https://www.twitch.tv/i2labs), [Youtube](https://www.youtube.com/@i2labs),
+and [Discord](https://discord.gg/RXczEFRw) so that I can hopefully recruit consultation from the community on things I
+may have missed and for feedback on the decisions I am making in real time. The stream will also serve as an educational
+resource where the various subsystems of Linux are explained and demonstrated.
 
 [![XKCD #456 It looks like today I will be the person that XKCD was warning your parents about.](https://imgs.xkcd.com/comics/cautionary.png)](https://xkcd.com/456)
 
@@ -377,7 +377,7 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
     * block standard DNS ports to prevent leaks
     * mDNS
     * dns in a container should route through host dns config? (mdns config)
-      * resolved has DBUS and socket support
+        * resolved has DBUS and socket support
     * [https://linux.die.net/man/8/nscd](https://linux.die.net/man/8/nscd)
     * https://github.com/systemd/systemd/pull/31537
 * firmware
@@ -452,7 +452,6 @@ flatpak override \--user \--device=all com.obsproject.Studio
 [https://docs.docker.com/build/building/base-images/\#create-a-base-image](https://docs.docker.com/build/building/base-images/#create-a-base-image)
 
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
-
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
 
