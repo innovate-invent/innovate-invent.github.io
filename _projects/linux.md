@@ -44,6 +44,7 @@ tech burden of maintenance.
 * ACPI system interface
 * GPT formatted disk
     * 4GB ESP partition ( or the option to reallocate space for a second 4GB ESP formatted partition)
+    * 4GB Swap space allocation (either swap partition or swap file)
 * 16GB of RAM
 * AMD, Intel, and possibly ARM CPU 64bit
 * Modern GPU (integrated or discreet) from Intel, AMD, or NVIDIA
@@ -107,7 +108,7 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
 [https://www.linuxboot.org/](https://www.linuxboot.org/)
 https://en.wikipedia.org/wiki/GoboLinux
 https://www.linuxfromscratch.org/lfs/view/stable/index.html
-
+https://en.wikipedia.org/wiki/Qubes_OS
 
 ---
 
@@ -409,6 +410,8 @@ https://www.linuxfromscratch.org/lfs/view/stable/index.html
 * sysfs only?
     * [https://www.kernel.org/doc/html/latest/admin-guide/abi.html](https://www.kernel.org/doc/html/latest/admin-guide/abi.html)
 * fonts?
+* selinux?
+  * https://wiki.archlinux.org/title/SELinux
 
 standalone server build with no gui? automatically bootstraps containers from a config?
 
