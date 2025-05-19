@@ -205,7 +205,8 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://github.com/fwupd/fwupd](https://github.com/fwupd/fwupd)
 * efi boot only
     * [https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement](https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement)
-    *
+    * https://unix.stackexchange.com/questions/152144/how-to-write-edit-update-the-osindications-efi-variable-from-command-line
+    * https://uefi.org/specs/UEFI/2.10/08_Services_Runtime_Services.html#getvariable
 * second partition containing rw mounts
     * /usr (might want to exclude given flatpack)
     * /home
@@ -234,6 +235,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://cgit.freedesktop.org/systemd/systemd/tree/src/systemd/sd-journal.h](https://cgit.freedesktop.org/systemd/systemd/tree/src/systemd/sd-journal.h)
     * [https://www.freedesktop.org/software/systemd/man/latest/sd-journal.html](https://www.freedesktop.org/software/systemd/man/latest/sd-journal.html)
     * DRM panic / DRM Boot logger
+    * https://www.ais.com/understanding-pstore-linux-kernel-persistent-storage-file-system/
 * automated updates
 * nothing but binaries and config in initramfs
     * [https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/about/](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/about/)
@@ -351,6 +353,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://linux.die.net/man/1/chrpath](https://linux.die.net/man/1/chrpath)
     * dedup
       * https://github.com/BLAKE3-team/BLAKE3
+      * https://www.man7.org/linux/man-pages/man1/chattr.1.html immutable files
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
@@ -374,7 +377,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
 * wifi
     * [https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/](https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/)
     * [https://wiki.archlinux.org/title/Wpa\_supplicant](https://wiki.archlinux.org/title/Wpa_supplicant)
-    *
+    * https://wireless.docs.kernel.org/en/latest/en/users/drivers.html
 * dns
     * detect captive portals with DoH/DoT active
     * block standard DNS ports to prevent leaks
@@ -457,6 +460,23 @@ flatpak override \--user \--device=all com.obsproject.Studio
 [https://docs.docker.com/build/building/base-images/\#create-a-base-image](https://docs.docker.com/build/building/base-images/#create-a-base-image)
 
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
+
+Debian packages for build dependencies
+```bash
+apt build-dep linux
+apt install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm
+```
+
+```bash
+losetup -Pf disk.img --show
+```
+
+Git submodule config
+https://www.youtube.com/watch?v=JESI498HSMA
+```bash
+git config --local push.recurseSubmodules on-demand
+git config --local submodule.recurse true
+```
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
 
