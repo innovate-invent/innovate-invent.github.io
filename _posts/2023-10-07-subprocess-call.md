@@ -2,7 +2,7 @@
 title: Subprocess calls and why you should never do them
 excerpt: Subprocess calls are non-trivial, especially when calling arbitrary executables
 published: false  
-tags:
+tags: [subprocess, process, system, execution, IPC, dependency management]
 at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/
 ---
 
@@ -10,7 +10,7 @@ at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/
   - cpu utilisation/limits
     - subprocesses inherit thread priority
   - memory utilization/limits
-  - disk space utilization/limits
+  - disk space utilization/limits/access
 - ipc limitations
   - many copies/pickling/serialization
   - parsing stdout and stderr
