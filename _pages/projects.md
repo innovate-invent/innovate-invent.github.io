@@ -57,6 +57,15 @@ ecosystem. This project is a vehicle to deep dive into the various components, d
 have in my knowledge on the subject. Through the years I have built up a wishlist of features to help simplify managing
 and maintaining my Linux deployments, and intend to realise this list in a novel approach.
 
+[ChatStream](https://github.com/innovate-invent/chatstream)
+----
+ChatStream is an OBS Studio overlay that provides streamers and content creators a means of integrating their viewers
+real time chat directly into the video stream. This provides viewers with an added level of interactivity with the
+stream content. It is a client application that directly accesses the streaming platforms API via the streamers OAuth
+credentials.
+
+ChatStream combines Twitch, Youtube, and Discord chats into a single stream. It can be embedded into a video stream via
+OBS Browser Source or used on its own. It provides a basic TTS system when selecting a chat message.
 
 Projects backburnered due to time, resource, or demand constraints
 ---
