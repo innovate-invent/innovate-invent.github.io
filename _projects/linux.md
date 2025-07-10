@@ -114,6 +114,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
 
 ## Reference
 
+[The Linux Kernel Documentation](https://www.kernel.org/doc/html/latest/index.html)
 [Linux Kernel 2.4 Internals](https://tldp.org/LDP/lki/index.html)   
 [https://makelinux.github.io/kernel/map/](https://makelinux.github.io/kernel/map/)   
 [https://makelinux.github.io/kernel/diagram/](https://makelinux.github.io/kernel/diagram/)   
@@ -139,12 +140,15 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * systemd mount instead of fstab
         * [https://wiki.archlinux.org/title/Systemd\#GPT\_partition\_automounting](https://wiki.archlinux.org/title/Systemd#GPT_partition_automounting)
         * [https://uapi-group.org/specifications/specs/discoverable\_partitions\_specification/](https://uapi-group.org/specifications/specs/discoverable_partitions_specification/)
+        * https://www.freedesktop.org/wiki/Software/udisks/
     * udev
         * [https://en.wikipedia.org/wiki/Udev](https://en.wikipedia.org/wiki/Udev)
         * [https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html\#](https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html#)
     * systemd-logind
         * [https://manpages.ubuntu.com/manpages/xenial/en/man8/pam\_systemd.8.html](https://manpages.ubuntu.com/manpages/xenial/en/man8/pam_systemd.8.html)
         * [https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html\#](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html#)
+        * Build in network auth for the login screen
+          * LDAP/Kerberos/NIS/ActiveDirectory
     * systemd-journald
         * ALL logs are redirected to journald
         * look into sharding journal with separate log rotation
@@ -187,6 +191,8 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * CONFIG\_DEVTMPFS=n
         * [https://www.kernelconfig.io/config\_devtmpfs](https://www.kernelconfig.io/config_devtmpfs)
         * [https://www.kernelconfig.io/CONFIG\_DEVTMPFS\_MOUNT](https://www.kernelconfig.io/CONFIG_DEVTMPFS_MOUNT)
+    * https://www.kernel.org/doc/html/latest/kbuild/kconfig.html
+    * https://www.kernel.org/doc/html/latest/kbuild/reproducible-builds.html
 * secureboot and tpm boot chain
     * [https://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.git/](https://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.git/)
     * [https://en.wikipedia.org/wiki/UEFI\#UEFI\_booting](https://en.wikipedia.org/wiki/UEFI#UEFI_booting)
@@ -203,6 +209,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
 * fwupd
     * [https://fwupd.org/](https://fwupd.org/)
     * [https://github.com/fwupd/fwupd](https://github.com/fwupd/fwupd)
+    * distribute uki updates via fwupd?
 * efi boot only
     * [https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement](https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement)
     * https://unix.stackexchange.com/questions/152144/how-to-write-edit-update-the-osindications-efi-variable-from-command-line
@@ -213,7 +220,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * /var?
     * [https://linux.die.net/man/7/hier](https://linux.die.net/man/7/hier)
     *
-  tmpfs [https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs](https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs)
+    tmpfs [https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs](https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs)
     * [https://github.com/torvalds/linux/commit/d29216842a85](https://github.com/torvalds/linux/commit/d29216842a85)
 * swapfile by default /var/swapfile
 * network
@@ -246,14 +253,19 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://wiki.archlinux.org/title/Systemd-homed](https://wiki.archlinux.org/title/Systemd-homed)
     * [https://gitlab.com/cryptsetup/cryptsetup/](https://gitlab.com/cryptsetup/cryptsetup/)
 * damn good tab completion
-* glibc based binaries
+* musl based binaries
     * [https://dmerej.info/blog/post/symlinks-and-so-files-on-linux/](https://dmerej.info/blog/post/symlinks-and-so-files-on-linux/)
     * [http://www.etalabs.net/compare\_libcs.html](http://www.etalabs.net/compare_libcs.html)
     * [https://www.gnu.org/savannah-checkouts/gnu/libc/index.html](https://www.gnu.org/savannah-checkouts/gnu/libc/index.html)
     * [https://www.gnu.org/software/libc/manual/html\_mono/libc.html\#Installation](https://www.gnu.org/software/libc/manual/html_mono/libc.html#Installation)
     * [https://sourceware.org/glibc/](https://sourceware.org/glibc/)
     * [https://sourceware.org/git/?p=glibc.git;a=blob;f=elf/dl-cache.c;hb=96429bcc91a14f71b177ddc5e716de3069060f2c\#l395](https://sourceware.org/git/?p=glibc.git;a=blob;f=elf/dl-cache.c;hb=96429bcc91a14f71b177ddc5e716de3069060f2c#l395)
-    *
+    * https://www.adelielinux.org/about/
+    * https://catfox.life/2024/09/05/porting-systemd-to-musl-libc-powered-linux/
+    * https://github.com/systemd/systemd/issues/10130
+    * https://postmarketos.org/blog/2024/05/26/the-road-to-systemd/
+    * https://mastodon.social/@pid_eins/113085993096695914
+    * https://mastodon.social/@awilfox@mst3k.interlinked.me/113084014192941053
 * all binaries compiled from source
     * git submodules of each project
         * coreutils
@@ -272,7 +284,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://stackoverflow.com/questions/46646625/in-what-library-on-linux-are-the-system-calls-and-how-is-this-library-linked-to](https://stackoverflow.com/questions/46646625/in-what-library-on-linux-are-the-system-calls-and-how-is-this-library-linked-to)
     * kernel provided shared libraries, ex: linux-vdso.so
     * [https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds\#verifying-artifact-attestations-with-the-github-cli](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds#verifying-artifact-attestations-with-the-github-cli)
-    *
+    * https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support
 * ~~windows installer powershell script~~ install efi via wsl
     * [https://linuxbsdos.com/2024/09/29/2-simple-ways-to-access-the-efi-system-partition-on-windows-11/](https://linuxbsdos.com/2024/09/29/2-simple-ways-to-access-the-efi-system-partition-on-windows-11/)
     * [https://oofhours.com/2022/06/29/geeking-out-with-the-uefi-boot-manager/](https://oofhours.com/2022/06/29/geeking-out-with-the-uefi-boot-manager/)
@@ -326,8 +338,8 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * systemd-networkd has a dhcp client
 * first-boot config setup optimisations
     *
-  lpj [https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html)
-  loops\_per\_jiffy
+    lpj [https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html)
+    loops\_per\_jiffy
 * microcode loading
     * [https://www.kernel.org/doc/html/v5.4/x86/microcode.html\#builtin-microcode](https://www.kernel.org/doc/html/v5.4/x86/microcode.html#builtin-microcode)
     * [https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases](https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases)
@@ -339,6 +351,9 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://blogs.gnome.org/alexl/2017/10/02/on-application-sizes-and-bloat-in-flatpak/](https://blogs.gnome.org/alexl/2017/10/02/on-application-sizes-and-bloat-in-flatpak/)
         * [https://flathub.org/apps/io.gitlab.gwendalj.package-transporter](https://flathub.org/apps/io.gitlab.gwendalj.package-transporter)
         * [https://gitlab.gnome.org/GNOME/gnome-software](https://gitlab.gnome.org/GNOME/gnome-software)
+    * overlayfs
+        * https://www.freedesktop.org/software/systemd/man/latest/systemd-sysext.html
+        * https://github.com/dimkr/overheadfs
     * runtime
         * [https://github.com/containers/crun/?tab=readme-ov-file](https://github.com/containers/crun/?tab=readme-ov-file)
         * [https://github.com/opencontainers/runc](https://github.com/opencontainers/runc)
@@ -349,11 +364,26 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://xkcd.com/927/](https://xkcd.com/927/)
         * [https://www.bassi.io/articles/2023/05/29/configuring-portals/](https://www.bassi.io/articles/2023/05/29/configuring-portals/)
     * linker
+        * https://musl.libc.org/
         * [https://www.man7.org/linux/man-pages/man8/ld.so.8.html](https://www.man7.org/linux/man-pages/man8/ld.so.8.html)
         * [https://linux.die.net/man/1/chrpath](https://linux.die.net/man/1/chrpath)
+        * add --cache-path to ld.so combined with custom binfmt_misc and magic?
+        * https://lwn.net/Articles/631631/
+        * add a section to ld.so with the cache location?
+        * custom fs that adapts paths based on pid and argc[0]?
+        * without breaking hardcoded [dlopen](https://www.man7.org/linux/man-pages/man3/dlopen.3p.html) paths
     * dedup
-      * https://github.com/BLAKE3-team/BLAKE3
-      * https://www.man7.org/linux/man-pages/man1/chattr.1.html immutable files
+        * https://github.com/BLAKE3-team/BLAKE3
+        * https://www.man7.org/linux/man-pages/man1/chattr.1.html immutable files
+    * ipc
+        * https://www.kernel.org/doc/html/next/userspace-api/netlink/intro.html
+        * https://www.man7.org/linux/man-pages/man2/socket.2.html
+    * podman
+      * https://github.com/rootless-containers/slirp4netns
+      * https://issues.redhat.com/browse/RUN-1953
+      * https://passt.top/passt/about/
+      * https://github.com/containers/netavark
+      * [mount remote tar.gz for update optimisation](https://github.com/mxmlnkn/ratarmount)
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
@@ -372,7 +402,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://wiki.archlinux.org/title/Advanced\_Linux\_Sound\_Architecture\#ALSA\_firmware](https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#ALSA_firmware)
     * [https://wiki.archlinux.org/title/PipeWire](https://wiki.archlinux.org/title/PipeWire)
     * [https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
-    *
+    * https://github.com/futpib/pagraphcontrol
 * bluetooth
 * wifi
     * [https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/](https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/)
@@ -412,9 +442,23 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://serverfault.com/questions/892134/why-is-there-both-character-device-and-block-device-for-nvme](https://serverfault.com/questions/892134/why-is-there-both-character-device-and-block-device-for-nvme)
 * sysfs only?
     * [https://www.kernel.org/doc/html/latest/admin-guide/abi.html](https://www.kernel.org/doc/html/latest/admin-guide/abi.html)
+    * https://www.kernel.org/doc/html/latest/admin-guide/sysfs-rules.html
+    * https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html
+    * https://www.kernel.org/doc/html/latest/admin-guide/devices.html
 * fonts?
 * selinux?
-  * https://wiki.archlinux.org/title/SELinux
+    * https://wiki.archlinux.org/title/SELinux
+    * https://github.com/SELinuxProject/selinux-notebook?tab=readme-ov-file
+    * https://github.com/SELinuxProject/selinux-notebook/blob/main/src/core_components.md
+    * https://linuxconfig.org/introduction-to-selinux-concepts-and-management
+    * https://github.com/SELinuxProject/selinux
+    * https://www.kernel.org/doc/html/latest/admin-guide/LSM/index.html
+    * https://docs.kernel.org/security/lsm-development.html#c.security_inode_mkdir
+    * https://en.wikipedia.org/wiki/Linux_Security_Modules
+    * https://www.usenix.org/legacy/event/sec02/full_papers/wright/wright_html/index.html
+    * https://events19.linuxfoundation.org/wp-content/uploads/2017/11/Secuity-Modules_Casey-Schaufler.pdf
+    * https://github.com/argussecurity/ulsm
+    * https://sites.google.com/site/fullycapable/capable-shared-objects?authuser=0
 
 standalone server build with no gui? automatically bootstraps containers from a config?
 
@@ -428,6 +472,7 @@ standalone server build with no gui? automatically bootstraps containers from a 
 [https://busybox.net/](https://busybox.net/)   
 [https://busybox.net/downloads/BusyBox.html](https://busybox.net/downloads/BusyBox.html)   
 [https://github.com/brgl/busybox/blob/master/examples/inittab](https://github.com/brgl/busybox/blob/master/examples/inittab)
+https://landley.net/toybox/help.html
 
 [https://www.qemu.org/docs/master/](https://www.qemu.org/docs/master/)  
 [https://www.qemu.org/docs/master/system/invocation.html](https://www.qemu.org/docs/master/system/invocation.html)  
@@ -449,6 +494,7 @@ sudo apt install linux-headers-$(uname \-r) v4l2loopback-dkms
 flatpak override \--user \--device=all com.obsproject.Studio  
 [https://ffmpeg.org/ffmpeg-protocols.html\#rtmp](https://ffmpeg.org/ffmpeg-protocols.html#rtmp)  
 [https://obsproject.com/forum/resources/multiple-rtmp-outputs-plugin.964/](https://obsproject.com/forum/resources/multiple-rtmp-outputs-plugin.964/)
+https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260/
 
 [https://github.com/Kostr/UEFI-Lessons?tab=readme-ov-file](https://github.com/Kostr/UEFI-Lessons?tab=readme-ov-file)  
 [https://trustedcomputinggroup.org/resource/tpm-library-specification/](https://trustedcomputinggroup.org/resource/tpm-library-specification/)   
@@ -459,9 +505,12 @@ flatpak override \--user \--device=all com.obsproject.Studio
 
 [https://docs.docker.com/build/building/base-images/\#create-a-base-image](https://docs.docker.com/build/building/base-images/#create-a-base-image)
 
+https://backports.docs.kernel.org/index.html
+
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
 
 Debian packages for build dependencies
+
 ```bash
 apt build-dep linux
 apt install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm
@@ -473,9 +522,19 @@ losetup -Pf disk.img --show
 
 Git submodule config
 https://www.youtube.com/watch?v=JESI498HSMA
+
 ```bash
 git config --local push.recurseSubmodules on-demand
 git config --local submodule.recurse true
+```
+
+Kernel build
+
+```bash
+make help
+make tinyconfig
+make bzImage  # arch/x86/boot/bzImage
+make modules
 ```
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
