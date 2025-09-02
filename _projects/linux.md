@@ -49,6 +49,8 @@ tech burden of maintenance.
 * AMD, Intel, and possibly ARM CPU 64bit
 * Modern GPU (integrated or discreet) from Intel, AMD, or NVIDIA
 
+Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.
+
 ---
 
 # Brain Dump
@@ -146,9 +148,11 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html\#](https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html#)
     * systemd-logind
         * [https://manpages.ubuntu.com/manpages/xenial/en/man8/pam\_systemd.8.html](https://manpages.ubuntu.com/manpages/xenial/en/man8/pam_systemd.8.html)
+        * https://wiki.archlinux.org/title/PAM
         * [https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html\#](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html#)
         * Build in network auth for the login screen
           * LDAP/Kerberos/NIS/ActiveDirectory
+          * https://sssd.io/
     * systemd-journald
         * ALL logs are redirected to journald
         * look into sharding journal with separate log rotation
@@ -214,14 +218,17 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement](https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement)
     * https://unix.stackexchange.com/questions/152144/how-to-write-edit-update-the-osindications-efi-variable-from-command-line
     * https://uefi.org/specs/UEFI/2.10/08_Services_Runtime_Services.html#getvariable
-* second partition containing rw mounts
-    * /usr (might want to exclude given flatpack)
-    * /home
-    * /var?
-    * [https://linux.die.net/man/7/hier](https://linux.die.net/man/7/hier)
-    *
-    tmpfs [https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs](https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs)
-    * [https://github.com/torvalds/linux/commit/d29216842a85](https://github.com/torvalds/linux/commit/d29216842a85)
+* disks
+  * change logical block size to match physical to avoid emulation
+  * smart data monitoring
+  * second partition containing rw mounts
+      * /usr (might want to exclude given flatpack)
+      * /home
+      * /var?
+      * [https://linux.die.net/man/7/hier](https://linux.die.net/man/7/hier)
+      *
+      tmpfs [https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs](https://serverfault.com/questions/590124/performance-difference-between-ramfs-and-tmpfs)
+      * [https://github.com/torvalds/linux/commit/d29216842a85](https://github.com/torvalds/linux/commit/d29216842a85)
 * swapfile by default /var/swapfile
 * network
     * nftables only?
@@ -309,6 +316,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://tldp.org/LDP/tlk/ipc/ipc.html](https://tldp.org/LDP/tlk/ipc/ipc.html)
     * [https://www.freedesktop.org/wiki/Software/systemd/kdbus/](https://www.freedesktop.org/wiki/Software/systemd/kdbus/)
 * acpi
+    * [acpi vs device tree](https://www.youtube.com/watch?v=UIXtM1IlnG4)
     * [https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/overview.html](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/overview.html)
     * [https://www.kernel.org/doc/Documentation/acpi/namespace.txt](https://www.kernel.org/doc/Documentation/acpi/namespace.txt)
     * [https://firmwaresecurity.com/tag/acpidbg/](https://firmwaresecurity.com/tag/acpidbg/)
@@ -375,6 +383,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * dedup
         * https://github.com/BLAKE3-team/BLAKE3
         * https://www.man7.org/linux/man-pages/man1/chattr.1.html immutable files
+        * https://github.com/mhx/dwarfs?tab=readme-ov-file
     * ipc
         * https://www.kernel.org/doc/html/next/userspace-api/netlink/intro.html
         * https://www.man7.org/linux/man-pages/man2/socket.2.html
@@ -384,6 +393,8 @@ https://en.wikipedia.org/wiki/Qubes_OS
       * https://passt.top/passt/about/
       * https://github.com/containers/netavark
       * [mount remote tar.gz for update optimisation](https://github.com/mxmlnkn/ratarmount)
+      * https://github.com/regclient/regclient
+    * [AppStream Metadata](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides)
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
@@ -404,6 +415,8 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
     * https://github.com/futpib/pagraphcontrol
 * bluetooth
+* modem
+  * https://www.freedesktop.org/wiki/Software/ModemManager/
 * wifi
     * [https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/](https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/)
     * [https://wiki.archlinux.org/title/Wpa\_supplicant](https://wiki.archlinux.org/title/Wpa_supplicant)
@@ -459,6 +472,11 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * https://events19.linuxfoundation.org/wp-content/uploads/2017/11/Secuity-Modules_Casey-Schaufler.pdf
     * https://github.com/argussecurity/ulsm
     * https://sites.google.com/site/fullycapable/capable-shared-objects?authuser=0
+* mime types
+  * https://gitlab.freedesktop.org/xdg/desktop-file-utils
+  * https://specifications.freedesktop.org/desktop-entry-spec/1.1/
+* cpu features?
+  * https://github.com/intel/media-driver
 
 standalone server build with no gui? automatically bootstraps containers from a config?
 
