@@ -111,6 +111,7 @@ or [Damn Small Linux](https://en.wikipedia.org/wiki/Damn_Small_Linux) but those 
 https://en.wikipedia.org/wiki/GoboLinux
 https://www.linuxfromscratch.org/lfs/view/stable/index.html
 https://en.wikipedia.org/wiki/Qubes_OS
+https://docs.bazzite.gg/
 
 ---
 
@@ -146,6 +147,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * udev
         * [https://en.wikipedia.org/wiki/Udev](https://en.wikipedia.org/wiki/Udev)
         * [https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html\#](https://www.freedesktop.org/software/systemd/man/latest/systemd-udevd.html#)
+        * automatically map touch screen to display? xinput map-to-output 'ILITEK ILITEK-TP' 'DP-1-0'
     * systemd-logind
         * [https://manpages.ubuntu.com/manpages/xenial/en/man8/pam\_systemd.8.html](https://manpages.ubuntu.com/manpages/xenial/en/man8/pam_systemd.8.html)
         * https://wiki.archlinux.org/title/PAM
@@ -168,10 +170,13 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://en.wikipedia.org/wiki/Cinnamon\_(desktop\_environment)](https://en.wikipedia.org/wiki/Cinnamon_\(desktop_environment\))
         * [https://projects.linuxmint.com/cinnamon/](https://projects.linuxmint.com/cinnamon/)
         * [https://trello.com/b/HHs01Pab/cinnamon-wayland](https://trello.com/b/HHs01Pab/cinnamon-wayland)
+        * https://wayland-book.com/introduction.html
     * KDE
         * Plasma login
         * Plasma login manager
-    *
+    * https://dri.freedesktop.org/wiki/DRM/
+    * https://www.kernel.org/doc/html/latest/gpu/drm-kms.html
+    * https://www.kernel.org/doc/html/v5.15/fb/framebuffer.html
 * targeting new laptops
 * mouse support in tty
     * [https://wiki.archlinux.org/title/General\_purpose\_mouse](https://wiki.archlinux.org/title/General_purpose_mouse)
@@ -325,6 +330,9 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://wiki.osdev.org/ACPI](https://wiki.osdev.org/ACPI)
     * [https://uefi.org/htmlspecs/ACPI\_Spec\_6\_4\_html/07\_Power\_and\_Performance\_Mgmt/oem-supplied-system-level-control-methods.html](https://uefi.org/htmlspecs/ACPI_Spec_6_4_html/07_Power_and_Performance_Mgmt/oem-supplied-system-level-control-methods.html)
     * [https://maplecircuit.dev/std/acpi.html](https://maplecircuit.dev/std/acpi.html)
+    * https://docs.kernel.org/admin-guide/acpi/initrd_table_override.html
+    * https://wiki.archlinux.org/title/DSDT
+    * https://docs.kernel.org/admin-guide/acpi/ssdt-overlays.html#loading-acpi-ssdts-from-configfs
     * fix the damn hot backpack issue
         * [https://www.spinics.net/lists/linux-usb/msg53661.html](https://www.spinics.net/lists/linux-usb/msg53661.html)
         * [https://github.com/torvalds/linux/blob/e70140ba0d2b1a30467d4af6bcfe761327b9ec95/drivers/platform/x86/asus-wmi.c\#L1433-L1458](https://github.com/torvalds/linux/blob/e70140ba0d2b1a30467d4af6bcfe761327b9ec95/drivers/platform/x86/asus-wmi.c#L1433-L1458)
@@ -339,6 +347,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
         * [https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html\#no\_console\_suspend](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html#no_console_suspend)
         * [https://unix.stackexchange.com/a/403171](https://unix.stackexchange.com/a/403171)
         * [https://docs.kernel.org/admin-guide/pm/sleep-states.html](https://docs.kernel.org/admin-guide/pm/sleep-states.html)
+    * UPS monitor/events
 * dhcp
     * [https://www.zscaler.com/blogs/security-research/cve-2024-3661-k-tunnelvision-exposes-vpn-bypass-vulnerability](https://www.zscaler.com/blogs/security-research/cve-2024-3661-k-tunnelvision-exposes-vpn-bypass-vulnerability)
     * [https://www.isc.org/dhcp](https://www.isc.org/dhcp)
@@ -395,6 +404,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
       * [mount remote tar.gz for update optimisation](https://github.com/mxmlnkn/ratarmount)
       * https://github.com/regclient/regclient
     * [AppStream Metadata](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides)
+    * https://distrobox.it/
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
@@ -421,6 +431,7 @@ https://en.wikipedia.org/wiki/Qubes_OS
     * [https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/](https://www.apt-browse.org/browse/ubuntu/precise/main/all/wireless-regdb/2011.04.28-1ubuntu3/debian/control/)
     * [https://wiki.archlinux.org/title/Wpa\_supplicant](https://wiki.archlinux.org/title/Wpa_supplicant)
     * https://wireless.docs.kernel.org/en/latest/en/users/drivers.html
+    * https://w1.fi/wpa_supplicant/
 * dns
     * detect captive portals with DoH/DoT active
     * block standard DNS ports to prevent leaks
@@ -436,6 +447,9 @@ https://en.wikipedia.org/wiki/Qubes_OS
 * wine
     * [https://en.wikipedia.org/wiki/Binfmt\_misc](https://en.wikipedia.org/wiki/Binfmt_misc)
     * [https://docs.kernel.org/admin-guide/binfmt-misc.html](https://docs.kernel.org/admin-guide/binfmt-misc.html)
+    * [protonup-qt](https://davidotek.github.io/protonup-qt/)
+* android?
+  * https://www.qemu.org/docs/master/user/main.html
 * rootless?
     * libcap
     * [https://sites.google.com/site/fullycapable/](https://sites.google.com/site/fullycapable/)
@@ -520,6 +534,8 @@ https://obsproject.com/forum/resources/background-removal-virtual-green-screen-l
 [https://www.qemu.org/docs/master/specs/tpm.html\#the-qemu-tpm-emulator-device](https://www.qemu.org/docs/master/specs/tpm.html#the-qemu-tpm-emulator-device)   
 [https://github.com/stefanberger/swtpm/tree/master](https://github.com/stefanberger/swtpm/tree/master)   
 [https://github.com/stefanberger/libtpms](https://github.com/stefanberger/libtpms)
+
+https://github.com/Zephkek/Asus-ROG-Aml-Deep-Dive
 
 [https://docs.docker.com/build/building/base-images/\#create-a-base-image](https://docs.docker.com/build/building/base-images/#create-a-base-image)
 
