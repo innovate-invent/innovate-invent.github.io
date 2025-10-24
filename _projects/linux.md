@@ -297,6 +297,11 @@ https://docs.bazzite.gg/
     * kernel provided shared libraries, ex: linux-vdso.so
     * [https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds\#verifying-artifact-attestations-with-the-github-cli](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds#verifying-artifact-attestations-with-the-github-cli)
     * https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support
+    * auditability
+      * https://www.youtube.com/watch?v=Fu3laL5VYdM
+      * [https://en.wikipedia.org/wiki/Runtime\_system](https://en.wikipedia.org/wiki/Runtime_system)
+      * [https://en.wikipedia.org/wiki/Crt0](https://en.wikipedia.org/wiki/Crt0)
+      * [https://en.wikipedia.org/wiki/Runtime\_library](https://en.wikipedia.org/wiki/Runtime_library)
 * ~~windows installer powershell script~~ install efi via wsl
     * [https://linuxbsdos.com/2024/09/29/2-simple-ways-to-access-the-efi-system-partition-on-windows-11/](https://linuxbsdos.com/2024/09/29/2-simple-ways-to-access-the-efi-system-partition-on-windows-11/)
     * [https://oofhours.com/2022/06/29/geeking-out-with-the-uefi-boot-manager/](https://oofhours.com/2022/06/29/geeking-out-with-the-uefi-boot-manager/)
@@ -353,6 +358,8 @@ https://docs.bazzite.gg/
     * [https://www.isc.org/dhcp](https://www.isc.org/dhcp)
     * [https://wiki.archlinux.org/title/Dhcpcd](https://wiki.archlinux.org/title/Dhcpcd)
     * systemd-networkd has a dhcp client
+      * https://github.com/systemd/systemd/issues/27699
+      * https://github.com/systemd/systemd/issues/16785
 * first-boot config setup optimisations
     *
     lpj [https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html)
@@ -405,6 +412,7 @@ https://docs.bazzite.gg/
       * https://github.com/regclient/regclient
     * [AppStream Metadata](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides)
     * https://distrobox.it/
+    * user vs global installs / namespaces
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
     * [https://hensm.github.io/fx\_cast/](https://hensm.github.io/fx_cast/)
