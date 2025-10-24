@@ -2,7 +2,7 @@
 title: ChatStream
 excerpt: A client side only embedded chat overlay for various streaming platforms
 tags: [ youtube, twitch, discord, overlay, chat, streaming, OBS ]
-at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/TODO
+at_url: at://did:plc:gdfkbwgnydyn4xgea7e7e6ht/app.bsky.feed.post/3m3wtkaqnzc25
 ---
 
 Planning to stream my development of a new linux distribution, and wanting to reach a broad audience, I wanted to stream
@@ -38,7 +38,7 @@ page. They forced me to publish a Terms of Service and Privacy Policy for my non
 anywhere but locally. They also have this insanely strict requirement for how the content is displayed. A pixel perfect
 YouTube logo must be displayed beside the content, not even the Font Awesome version of the YouTube logo was sufficient.
 I had to do some wizardry with a CSS radial gradient to get it approved. The craziest thing is they actually use pixel
-dimensions in their requirements, meaning that if you are running a lower resolution monitor the logo that is supposed
+dimensions in their requirements, meaning that if you are running a lower resolution monitor, the logo that is supposed
 to be inline with the text ends up being ~20% of the screen width. I had to increase the default font size just to make
 it not look terrible alongside the other content (luckily the end user can easily adjust the font size and logo). It
 took maybe 40 emails (I migrated email providers in that time and lost track) back and forth before it would approve me,
