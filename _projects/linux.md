@@ -121,7 +121,8 @@ https://docs.bazzite.gg/
 [Linux Kernel 2.4 Internals](https://tldp.org/LDP/lki/index.html)   
 [https://makelinux.github.io/kernel/map/](https://makelinux.github.io/kernel/map/)   
 [https://makelinux.github.io/kernel/diagram/](https://makelinux.github.io/kernel/diagram/)   
-[https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html](https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html)  
+[POSIX 2017](https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html)
+[POSIX 2024](https://pubs.opengroup.org/onlinepubs/9799919799/)
 [https://www.kernelconfig.io/index.html](https://www.kernelconfig.io/index.html)
 
 * root is ro initramfs
@@ -223,6 +224,8 @@ https://docs.bazzite.gg/
     * [https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement](https://www.extremetech.com/computing/96985-demystifying-uefi-the-long-overdue-bios-replacement)
     * https://unix.stackexchange.com/questions/152144/how-to-write-edit-update-the-osindications-efi-variable-from-command-line
     * https://uefi.org/specs/UEFI/2.10/08_Services_Runtime_Services.html#getvariable
+    * https://en.wikipedia.org/wiki/Comparison_of_bootloaders
+      * u-boot vs tianocore/coreboot
 * disks
   * change logical block size to match physical to avoid emulation
   * smart data monitoring
@@ -243,6 +246,8 @@ https://docs.bazzite.gg/
     * [https://en.wikipedia.org/wiki/Netfilter](https://en.wikipedia.org/wiki/Netfilter)
     * https://www.slideshare.net/slideshow/the-linux-networking-architecture/45348971
     * https://manpages.debian.org/unstable/networkd-dispatcher/networkd-dispatcher.8.en.html
+    * sr-iov
+    * [NetLabel](https://docs.kernel.org/netlabel/introduction.html)
 * good error reporting
     * [https://www.kernel.org/doc/Documentation/kdump/kdump.txt](https://www.kernel.org/doc/Documentation/kdump/kdump.txt)
     * journald reports
@@ -412,6 +417,7 @@ https://docs.bazzite.gg/
       * https://github.com/regclient/regclient
     * [AppStream Metadata](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides)
     * https://distrobox.it/
+    * [Container community](https://www.linuxserver.io/)
     * user vs global installs / namespaces
 * network display / screen casting support
     * [https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays](https://community.linuxmint.com/software/view/org.gnome.NetworkDisplays)
@@ -577,6 +583,11 @@ make help
 make tinyconfig
 make bzImage  # arch/x86/boot/bzImage
 make modules
+```
+
+show hardware
+```bash
+sudo lshw -html > Downloads/devices.html
 ```
 
 [https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c](https://stackoverflow.com/questions/30011603/how-to-enable-rust-ownership-paradigm-in-c) 
