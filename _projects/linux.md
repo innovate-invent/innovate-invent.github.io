@@ -518,7 +518,7 @@ standalone server build with no gui? automatically bootstraps containers from a 
 [https://busybox.net/](https://busybox.net/)   
 [https://busybox.net/downloads/BusyBox.html](https://busybox.net/downloads/BusyBox.html)   
 [https://github.com/brgl/busybox/blob/master/examples/inittab](https://github.com/brgl/busybox/blob/master/examples/inittab)
-https://landley.net/toybox/help.html
+[Toybox](https://landley.net/toybox/help.html)
 
 [https://www.qemu.org/docs/master/](https://www.qemu.org/docs/master/)  
 [https://www.qemu.org/docs/master/system/invocation.html](https://www.qemu.org/docs/master/system/invocation.html)  
@@ -555,7 +555,9 @@ https://github.com/Zephkek/Asus-ROG-Aml-Deep-Dive
 
 https://backports.docs.kernel.org/index.html
 
+```bash
 while [inotifywait](https://linux.die.net/man/1/inotifywait) \-e modify Dockerfile; do ./Dockerfile; done
+```
 
 Debian packages for build dependencies
 
@@ -564,8 +566,23 @@ apt build-dep linux
 apt install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm
 ```
 
+generate an uncompressed cpio archive
+
 ```bash
+find . | cpio -o --no-absolute-filenames -H newc --dot > ../initrd.cpio
+```
+
+
+
+```bash
+truncate -s2G disk.img
 losetup -Pf disk.img --show
+path=$(losetup -Pf disk.img --show)
+mkfs.vfat "$path"
+mount "$path" /mnt
+cp initrd.cpio /mnt/
+umount /mnt
+losetup -d "$path"
 ```
 
 Git submodule config
@@ -579,11 +596,20 @@ git config --local submodule.recurse true
 Kernel build
 
 ```bash
+git clone --depth 1 -b v6.18.y https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+cd linux
 make help
-make tinyconfig
+make defconfig # tinyconfig
 make bzImage  # arch/x86/boot/bzImage
 make modules
 ```
+
+```bash
+qemu-system-x86_64 -nographic -kernel linux/arch/x86/boot/bzImage -initrd initrd.cpio -append "console=ttyS0" # ctrl-A x to exit
+```
+
+https://qemu-project.gitlab.io/qemu/system/linuxboot.html
+https://www.kernel.org/doc/html/v6.18/admin-guide/kernel-parameters.html
 
 show hardware
 ```bash
