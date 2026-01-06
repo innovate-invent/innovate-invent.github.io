@@ -193,6 +193,7 @@ https://docs.bazzite.gg/
 * custom kernel build, statically linked modules
     * [https://github.com/NVIDIA/open-gpu-kernel-modules](https://github.com/NVIDIA/open-gpu-kernel-modules)
     * [https://wiki.archlinux.org/title/AMDGPU](https://wiki.archlinux.org/title/AMDGPU)
+    * [OpenGL/Vulcan library implementation](https://mesa3d.org/)
     * static ext4, video, encryption, md raid?
     * dynamic network, etc
     * [https://en.wikipedia.org/wiki/Menuconfig](https://en.wikipedia.org/wiki/Menuconfig)
@@ -606,10 +607,25 @@ make modules
 
 ```bash
 qemu-system-x86_64 -nographic -kernel linux/arch/x86/boot/bzImage -initrd initrd.cpio -append "console=ttyS0" # ctrl-A x to exit
+mkdir /sys /proc
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
 ```
 
 https://qemu-project.gitlab.io/qemu/system/linuxboot.html
 https://www.kernel.org/doc/html/v6.18/admin-guide/kernel-parameters.html
+
+https://www.kernel.org/doc/html/v6.18/filesystems/proc.html#the-proc-filesystem
+https://www.kernel.org/doc/html/v6.18/filesystems/sysfs.html
+https://www.kernel.org/doc/html/v6.18/filesystems/efivarfs.html
+
+Build systemd
+```bash
+apt build-dep systemd
+meson setup build
+meson compile -C build
+```
+
 
 show hardware
 ```bash
